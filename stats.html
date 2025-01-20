@@ -1,0 +1,1204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Base Stats</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold text-center mb-8">Knowledge Base Statistics</h1>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Overall Statistics -->
+      <div class="bg-white p-6 shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Overall Metrics</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Total Notes</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">7961</p>
+              
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Average Note Age</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">7 months, 14 days</p>
+              
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Oldest Note</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">2 years, 4 months, 23 days</p>
+              <p class="text-center text-sm text-gray-600 mt-1">2022-09-09</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Newest Note</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">0 days</p>
+              <p class="text-center text-sm text-gray-600 mt-1">2025-01-20</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Total Words</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">2866131</p>
+              <p class="text-center text-sm text-gray-600 mt-1">191 hours, 5 minutes</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Books Equivalent</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">31.8</p>
+              
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Internal Links</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">64292</p>
+              <p class="text-center text-sm text-gray-600 mt-1">8.1 per note</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">External Links</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">11756</p>
+              <p class="text-center text-sm text-gray-600 mt-1">1.5 per note</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Maps of Content</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">116</p>
+              <p class="text-center text-sm text-gray-600 mt-1">90.1 links/MOC</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Voice Notes</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">40</p>
+              
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Total Tasks</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">7795</p>
+              
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Total Folders</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">91</p>
+              
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- Content Updates -->
+      <div class="bg-white p-6 shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Content Updates</h2>
+        <div class="grid grid-cols-2 gap-4">
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">This Year</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">341</p>
+              <p class="text-center text-sm text-gray-600 mt-1">4.3%</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Last Week</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">232</p>
+              <p class="text-center text-sm text-gray-600 mt-1">2.9%</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Last Month</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">632</p>
+              <p class="text-center text-sm text-gray-600 mt-1">7.9%</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Last Quarter</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">2091</p>
+              <p class="text-center text-sm text-gray-600 mt-1">26.3%</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Last Year</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">7151</p>
+              <p class="text-center text-sm text-gray-600 mt-1">89.8%</p>
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- Notes by Type -->
+      <div class="bg-white p-6 shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Notes by Type</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Quotes</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">1737</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Permanent Notes</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">1446</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">People</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">630</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Literature Notes</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">307</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Published Articles</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">252</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">My Quotes</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">238</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Book Notes</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">156</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Mocs</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">116</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Newsletters</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">94</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Projects</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">77</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Expressions</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">64</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Meeting Notes</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">16</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">Drafts Articles</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">2</p>
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- Tag Cloud -->
+      <div class="bg-white p-6 shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Tag Cloud</h2>
+        <div class="flex flex-wrap gap-2 justify-center">
+          
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 1.978350206951907rem; opacity: 1;">
+                  Quotes
+                  <span class="text-xs ml-1 text-gray-500">1737</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 1.8296299237696796rem; opacity: 0.9329879101899827;">
+                  Permanent Notes
+                  <span class="text-xs ml-1 text-gray-500">1446</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 1.3260885335638943rem; opacity: 0.7450777202072538;">
+                  People
+                  <span class="text-xs ml-1 text-gray-500">630</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 1.3080378224581481rem; opacity: 0.7393206678180771;">
+                  Personal Development
+                  <span class="text-xs ml-1 text-gray-500">605</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 1.1546987810171467rem; opacity: 0.692803684513529;">
+                  Pkm
+                  <span class="text-xs ml-1 text-gray-500">403</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 1.0766736146402334rem; opacity: 0.6706966033390903;">
+                  Literature Notes
+                  <span class="text-xs ml-1 text-gray-500">307</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 1.0658269520767756rem; opacity: 0.6677029360967185;">
+                  Learning
+                  <span class="text-xs ml-1 text-gray-500">294</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 1.0565946410620475rem; opacity: 0.6651698330454807;">
+                  Work
+                  <span class="text-xs ml-1 text-gray-500">283</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 1.0506933209777671rem; opacity: 0.6635578583765112;">
+                  Life
+                  <span class="text-xs ml-1 text-gray-500">276</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 1.0303032714418743rem; opacity: 0.6580310880829016;">
+                  Published Articles
+                  <span class="text-xs ml-1 text-gray-500">252</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 1.0208754681006393rem; opacity: 0.6554979850316638;">
+                  Concepts
+                  <span class="text-xs ml-1 text-gray-500">241</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 1.0182951488599994rem; opacity: 0.6548071387449625;">
+                  My Quotes
+                  <span class="text-xs ml-1 text-gray-500">238</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 1.0096656887058364rem; opacity: 0.6525043177892919;">
+                  Success
+                  <span class="text-xs ml-1 text-gray-500">228</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 1.0088003285446208rem; opacity: 0.6522740356937248;">
+                  Productivity
+                  <span class="text-xs ml-1 text-gray-500">227</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9835113266787213rem; opacity: 0.6455958549222798;">
+                  Writing
+                  <span class="text-xs ml-1 text-gray-500">198</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9738196704737297rem; opacity: 0.643062751871042;">
+                  Entrepreneurship
+                  <span class="text-xs ml-1 text-gray-500">187</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9711668740966679rem; opacity: 0.6423719055843408;">
+                  Books
+                  <span class="text-xs ml-1 text-gray-500">184</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9693960406032115rem; opacity: 0.6419113413932067;">
+                  Business
+                  <span class="text-xs ml-1 text-gray-500">182</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9578404405541723rem; opacity: 0.6389176741508348;">
+                  Progress
+                  <span class="text-xs ml-1 text-gray-500">169</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.950690061978906rem; opacity: 0.6370754173862982;">
+                  Summaries
+                  <span class="text-xs ml-1 text-gray-500">161</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 0.9462057544459705rem; opacity: 0.6359240069084628;">
+                  Book Notes
+                  <span class="text-xs ml-1 text-gray-500">156</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9381040711218459rem; opacity: 0.6338514680483592;">
+                  Note Taking
+                  <span class="text-xs ml-1 text-gray-500">147</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.936298441637174rem; opacity: 0.6333909038572251;">
+                  Content Creation
+                  <span class="text-xs ml-1 text-gray-500">145</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9353949072018733rem; opacity: 0.633160621761658;">
+                  Psychology
+                  <span class="text-xs ml-1 text-gray-500">144</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9326814189960756rem; opacity: 0.6324697754749568;">
+                  Software Development
+                  <span class="text-xs ml-1 text-gray-500">141</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.926333052056074rem; opacity: 0.6308578008059873;">
+                  Knowledge
+                  <span class="text-xs ml-1 text-gray-500">134</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9236050493310611rem; opacity: 0.6301669545192861;">
+                  Thinking
+                  <span class="text-xs ml-1 text-gray-500">131</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9217839457825132rem; opacity: 0.629706390328152;">
+                  Action
+                  <span class="text-xs ml-1 text-gray-500">129</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9181358757130427rem; opacity: 0.6287852619458837;">
+                  Tips
+                  <span class="text-xs ml-1 text-gray-500">125</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 0.9098989820752332rem; opacity: 0.6267127230857801;">
+                  Mocs
+                  <span class="text-xs ml-1 text-gray-500">116</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.9080631287650675rem; opacity: 0.6262521588946459;">
+                  Focus
+                  <span class="text-xs ml-1 text-gray-500">114</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.8970061792174675rem; opacity: 0.6234887737478411;">
+                  Goals
+                  <span class="text-xs ml-1 text-gray-500">102</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-green-100" 
+                      style="font-size: 0.8960815123466966rem; opacity: 0.623258491652274;">
+                  Time
+                  <span class="text-xs ml-1 text-gray-500">101</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 0.8895947233367899rem; opacity: 0.6216465169833045;">
+                  Newsletters
+                  <span class="text-xs ml-1 text-gray-500">94</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 0.8737372695377609rem; opacity: 0.6177317213586644;">
+                  Projects
+                  <span class="text-xs ml-1 text-gray-500">77</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 0.861510384189247rem; opacity: 0.6147380541162925;">
+                  Expressions
+                  <span class="text-xs ml-1 text-gray-500">64</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 0.8155875017562203rem; opacity: 0.603684513529073;">
+                  Meeting Notes
+                  <span class="text-xs ml-1 text-gray-500">16</span>
+                </span>
+              
+                <span class="px-2 py-1 rounded bg-blue-100" 
+                      style="font-size: 0.8019562717924028rem; opacity: 0.6004605641911341;">
+                  Drafts Articles
+                  <span class="text-xs ml-1 text-gray-500">2</span>
+                </span>
+              
+        </div>
+      </div>
+
+      <!-- Topics -->
+      <div class="bg-white p-6 shadow-lg rounded-lg col-span-1 lg:col-span-2">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Topics</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Personal Development</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">605</p>
+              <p class="text-center text-sm text-gray-600 mt-1">42.8/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Pkm</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">403</p>
+              <p class="text-center text-sm text-gray-600 mt-1">30.3/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Learning</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">294</p>
+              <p class="text-center text-sm text-gray-600 mt-1">21.2/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Work</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">283</p>
+              <p class="text-center text-sm text-gray-600 mt-1">20.6/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Life</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">276</p>
+              <p class="text-center text-sm text-gray-600 mt-1">19.5/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Concepts</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">241</p>
+              <p class="text-center text-sm text-gray-600 mt-1">17.0/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Success</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">228</p>
+              <p class="text-center text-sm text-gray-600 mt-1">15.9/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Productivity</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">227</p>
+              <p class="text-center text-sm text-gray-600 mt-1">16.4/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Writing</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">198</p>
+              <p class="text-center text-sm text-gray-600 mt-1">14.7/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Entrepreneurship</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">187</p>
+              <p class="text-center text-sm text-gray-600 mt-1">13.7/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Books</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">184</p>
+              <p class="text-center text-sm text-gray-600 mt-1">13.0/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Business</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">182</p>
+              <p class="text-center text-sm text-gray-600 mt-1">12.8/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Progress</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">169</p>
+              <p class="text-center text-sm text-gray-600 mt-1">11.7/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Summaries</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">161</p>
+              <p class="text-center text-sm text-gray-600 mt-1">37.6/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Note Taking</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">147</p>
+              <p class="text-center text-sm text-gray-600 mt-1">11.0/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Content Creation</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">145</p>
+              <p class="text-center text-sm text-gray-600 mt-1">10.2/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Psychology</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">144</p>
+              <p class="text-center text-sm text-gray-600 mt-1">10.1/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Software Development</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">141</p>
+              <p class="text-center text-sm text-gray-600 mt-1">47.3/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Knowledge</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">134</p>
+              <p class="text-center text-sm text-gray-600 mt-1">9.4/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Thinking</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">131</p>
+              <p class="text-center text-sm text-gray-600 mt-1">9.3/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Action</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">129</p>
+              <p class="text-center text-sm text-gray-600 mt-1">9.0/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Tips</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">125</p>
+              <p class="text-center text-sm text-gray-600 mt-1">9.0/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Focus</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">114</p>
+              <p class="text-center text-sm text-gray-600 mt-1">7.9/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Goals</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">102</p>
+              <p class="text-center text-sm text-gray-600 mt-1">7.2/month</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">Time</h3>
+              <p class="text-center text-3xl font-bold text-blue-500">101</p>
+              <p class="text-center text-sm text-gray-600 mt-1">7.3/month</p>
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- Folders -->
+      <div class="bg-white p-6 shadow-lg rounded-lg col-span-1 lg:col-span-2">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Top Folders</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/32 Literature notes/32.05 Quotes</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">2227</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">168922</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">3917</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 11 hours, 16 minutes<br>
+                Books: 1.88<br>
+                Growth: 77.4/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/33 Permanent notes/33.02 Content</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">1458</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">400068</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">4217</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 26 hours, 40 minutes<br>
+                Books: 4.45<br>
+                Growth: 50.7/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/36 People</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">620</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">80868</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">2574</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 5 hours, 23 minutes<br>
+                Books: 0.90<br>
+                Growth: 67.1/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/32 Literature notes/32.02 Content</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">309</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">51107</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">666</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 3 hours, 24 minutes<br>
+                Books: 0.57<br>
+                Growth: 10.7/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/33 Permanent notes/33.05 Quotes</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">281</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">27710</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">353</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 1 hour, 51 minutes<br>
+                Books: 0.31<br>
+                Growth: 9.8/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/33 Permanent notes/33.03 Articles/Published</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">253</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">427927</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">1579</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 28 hours, 32 minutes<br>
+                Books: 4.75<br>
+                Growth: 27.5/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/32 Literature notes/32.03 Book notes</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">157</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">68306</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">875</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 4 hours, 33 minutes<br>
+                Books: 0.76<br>
+                Growth: 17.0/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/34 MOCs</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">118</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">126726</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">10778</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 8 hours, 27 minutes<br>
+                Books: 1.41<br>
+                Growth: 12.8/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/32 Literature notes/32.04 Expressions</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">65</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">2538</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">92</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 10 minutes<br>
+                Books: 0.03<br>
+                Growth: 7.6/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/38 Voice notes</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">40</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">5561</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">66</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 22 minutes<br>
+                Books: 0.06<br>
+                Growth: 5.2/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">10 Meta/10.06 Private Notes</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">35</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">23349</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">1</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 1 hour, 33 minutes<br>
+                Books: 0.26<br>
+                Growth: 4.1/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/31 Fleeting notes</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">31</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">5952</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">4</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 24 minutes<br>
+                Books: 0.07<br>
+                Growth: 3.6/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">20 Projects/Ideas</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">29</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">6151</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">0</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 25 minutes<br>
+                Books: 0.07<br>
+                Growth: 6.1/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">20 Projects/YouTube</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">28</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">7860</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">4</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 31 minutes<br>
+                Books: 0.09<br>
+                Growth: 3.3/month
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-lg font-semibold mb-2 text-center">30 Areas/33 Permanent notes/33.01 Knowledge Inbox/Business</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Notes</p>
+                  <p class="text-xl font-bold text-blue-500">26</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Words</p>
+                  <p class="text-xl font-bold text-blue-500">5244</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600 text-sm">Links</p>
+                  <p class="text-xl font-bold text-blue-500">1</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading: 21 minutes<br>
+                Books: 0.06<br>
+                Growth: 3.0/month
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- Tags -->
+      <div class="bg-white p-6 shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Tags</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Total Unique Tags</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">2128</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Notes Under Areas</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">5895</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Notes Without Tags</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">876</p>
+            <p class="text-center text-sm text-gray-600 mt-1">14.9%</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Average Tags per Note</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">3.7</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Periodic Notes -->
+      <div class="bg-white p-6 shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Periodic Notes</h2>
+        <div class="grid grid-cols-1 gap-4">
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">Daily Notes</h3>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="text-center">
+                  <p class="text-gray-600">Count</p>
+                  <p class="text-2xl font-bold text-blue-500">1189</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600">Words</p>
+                  <p class="text-2xl font-bold text-blue-500">247223</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600">Avg Words</p>
+                  <p class="text-2xl font-bold text-blue-500">208</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading Time: 16 hours, 29 minutes<br>
+                Books Equivalent: 2.75
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">Weekly Notes</h3>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="text-center">
+                  <p class="text-gray-600">Count</p>
+                  <p class="text-2xl font-bold text-blue-500">178</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600">Words</p>
+                  <p class="text-2xl font-bold text-blue-500">115318</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600">Avg Words</p>
+                  <p class="text-2xl font-bold text-blue-500">648</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading Time: 7 hours, 41 minutes<br>
+                Books Equivalent: 1.28
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">Monthly Notes</h3>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="text-center">
+                  <p class="text-gray-600">Count</p>
+                  <p class="text-2xl font-bold text-blue-500">37</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600">Words</p>
+                  <p class="text-2xl font-bold text-blue-500">75743</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600">Avg Words</p>
+                  <p class="text-2xl font-bold text-blue-500">2047</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading Time: 5 hours, 3 minutes<br>
+                Books Equivalent: 0.84
+              </div>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">Yearly Notes</h3>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="text-center">
+                  <p class="text-gray-600">Count</p>
+                  <p class="text-2xl font-bold text-blue-500">4</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600">Words</p>
+                  <p class="text-2xl font-bold text-blue-500">69082</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-600">Avg Words</p>
+                  <p class="text-2xl font-bold text-blue-500">17271</p>
+                </div>
+              </div>
+              <div class="mt-2 text-sm text-gray-600 text-center">
+                Reading Time: 4 hours, 36 minutes<br>
+                Books Equivalent: 0.77
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- Special Files -->
+      <div class="bg-white p-6 shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Special Files</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Canvas Files</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">13</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Templates</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">27</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Public Attachments</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">1159</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Private Attachments</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">153</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vault Size -->
+      <div class="bg-white p-6 shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Vault Size</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Total Size</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">726.86 MB</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Markdown Files</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">17.94 MB</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Attachments</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">708.78 MB</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Git Commits</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">165</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Public Notes Metrics -->
+      <div class="bg-white p-6 shadow-lg rounded-lg col-span-1 lg:col-span-2">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Public Notes Metrics</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Total Published</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">6478</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Published Words</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">1079467</p>
+            <p class="text-center text-sm text-gray-600 mt-1">71 hours, 58 minutes</p>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-center text-lg font-semibold">Books Equivalent</h3>
+            <p class="text-center text-4xl font-bold text-blue-500 mt-2">12.0</p>
+          </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">2022 Published</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">133</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">2023 Published</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">13</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">2024 Published</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">5103</p>
+            </div>
+          
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h3 class="text-center text-lg font-semibold">2025 Published</h3>
+              <p class="text-center text-4xl font-bold text-blue-500 mt-2">70</p>
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- Published by Month Graph -->
+      <div class="bg-white p-6 shadow-lg rounded-lg col-span-1 lg:col-span-2">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700 border-b pb-2">Published by Month</h2>
+        <canvas id="publishedByMonth"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const publishedByMonthData = Object.entries({"2025-01":70,"2024-05":3236,"2024-04":143,"2024-06":792,"2024-08":220,"2024-12":230,"2024-07":243,"2024-10":42,"2024-11":181,"2022-09":129,"2022-10":3,"2024-02":4,"2023-11":2,"2023-06":2,"2023-12":1,"2024-01":3,"2023-01":3,"2023-07":2,"2024-09":8,"2023-08":1,"2022-11":1,"2023-02":1,"2024-03":1,"2023-09":1})
+      .sort(([a], [b]) => new Date(a) - new Date(b));
+
+    const ctx = document.getElementById('publishedByMonth').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: publishedByMonthData.map(([month]) => month),
+        datasets: [{
+          label: 'Published Notes',
+          data: publishedByMonthData.map(([, count]) => count),
+          borderColor: 'rgba(59, 130, 246, 0.8)',
+          backgroundColor: 'rgba(59, 130, 246, 0.1)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          title: { display: false }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { stepSize: 1 }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+  
