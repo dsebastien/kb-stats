@@ -525,10 +525,9 @@ function generateHtml(stats, ctaProducts, outputFilePath) {
         This entire system runs on the <strong style="color:var(--text)">Obsidian Starter Kit</strong> —
         the same structure, templates and workflows behind every number on this page.
       </p>
-      ${ctaProducts.length ? `
-      <div class="grid sm:grid-cols-2 gap-6 mt-8 max-w-3xl mx-auto">
+      <div id="ctaCards" class="grid sm:grid-cols-2 gap-6 mt-8 max-w-3xl mx-auto${ctaProducts.length ? "" : " hidden"}">
         ${ctaProducts.map(renderCtaCard).join("")}
-      </div>` : ""}
+      </div>
       <div class="mt-8 reveal">
         <a class="btn-primary" href="https://store.dsebastien.net" style="color:#fff">Browse the store →</a>
       </div>
@@ -659,6 +658,48 @@ function generateHtml(stats, ctaProducts, outputFilePath) {
     window.addEventListener("scroll", function () {
       fab.classList.toggle("show", window.scrollY > 600);
     }, { passive: true });
+
+    // Refresh the CTA product cards from the live store catalog at runtime
+    // (build-time render from the snapshot stays as the fallback).
+    (function () {
+      var IDS = ["obsidian-starter-kit", "knowii-community"];
+      var grid = document.getElementById("ctaCards");
+      if (!grid) return;
+
+      function esc(s) {
+        return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+      function titleCase(s) {
+        return String(s || "").replace(/-/g, " ").replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+      }
+      function card(p) {
+        var kicker = [titleCase(p.priceTier), titleCase(p.mainCategory)].filter(Boolean).join(" · ");
+        var html = '<a class="cta-card" href="' + esc(p.href) + '" target="_blank" rel="noopener">';
+        if (p.image) html += '<div class="cta-card-media"><img src="' + esc(p.image) + '" alt="' + esc(p.imageAlt || p.name) + '" loading="lazy" decoding="async"></div>';
+        html += '<div class="cta-card-body">';
+        if (p.badge) html += '<span class="cta-card-badge">' + esc(titleCase(p.badge)) + '</span>';
+        if (kicker) html += '<span class="cta-card-kicker">' + esc(kicker) + '</span>';
+        html += '<span class="cta-card-title">' + esc(p.name) + '</span>';
+        if (p.shortDescription) html += '<span class="cta-card-blurb">' + esc(p.shortDescription) + '</span>';
+        html += '<span class="cta-card-more">Learn more →</span></div></a>';
+        return html;
+      }
+
+      fetch("https://www.store.dsebastien.net/products-light.json")
+        .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+        .then(function (data) {
+          var items = Array.isArray(data) ? data : data.products || [];
+          var picks = IDS.map(function (id) {
+            return items.find(function (p) { return p && p.id === id; });
+          }).filter(Boolean);
+          if (!picks.length) return;
+          grid.innerHTML = picks.map(card).join("");
+          grid.classList.remove("hidden");
+        })
+        .catch(function (e) { console.warn("Live catalog unavailable, keeping built-in cards:", e.message); });
+    })();
   </script>
 </body>
 </html>
