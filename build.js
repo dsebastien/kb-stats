@@ -30,7 +30,15 @@ function cumulative(entries) {
 // ---------------------------------------------------------------
 // GitHub-style activity heatmap, rendered server-side
 // ---------------------------------------------------------------
-const HEAT_RAMP = ["#343c48", "#5c1440", "#8a1059", "#c00c73", "#ff1493", "#ff6ab8"];
+// Magenta opacity ramp on the dark well — clean, monotonic lightness
+const HEAT_RAMP = [
+  "rgba(255,255,255,0.06)",
+  "rgba(255,20,147,0.18)",
+  "rgba(255,20,147,0.35)",
+  "rgba(255,20,147,0.55)",
+  "rgba(255,20,147,0.78)",
+  "#ff1493",
+];
 
 function heatColor(count, max) {
   if (!count) return HEAT_RAMP[0];
@@ -46,6 +54,20 @@ function buildHeatmap(createdByDay) {
   const start = new Date(today);
   start.setDate(start.getDate() - 364);
   while (start.getDay() !== 1) start.setDate(start.getDate() - 1);
+
+  // Totals + busiest day (within the displayed window)
+  let total = 0;
+  let busiest = null;
+  {
+    const cur = new Date(start);
+    while (cur <= today) {
+      const key = cur.toISOString().slice(0, 10);
+      const count = days[key] || 0;
+      total += count;
+      if (count > 0 && (!busiest || count > busiest.count)) busiest = { key, count };
+      cur.setDate(cur.getDate() + 1);
+    }
+  }
 
   const columns = [];
   const monthLabels = [];
@@ -73,13 +95,24 @@ function buildHeatmap(createdByDay) {
     .map((m) => `<span style="grid-column-start:${m.week + 1}">${m.label}</span>`)
     .join("");
   const legend = HEAT_RAMP.map((c) => `<span class="heat-cell" style="background:${c}"></span>`).join("");
+  const busiestDate = busiest
+    ? new Date(busiest.key + "T12:00:00").toLocaleString("en-US", { month: "long", day: "numeric" })
+    : null;
+  const dayLabel = (t) => `<div class="heat-daylabel">${t}</div>`;
+
   return `
-    <div class="overflow-x-auto pb-2">
-      <div class="heat-months" style="grid-template-columns: repeat(${columns.length}, 13px)">${labels}</div>
-      <div class="flex gap-[3px]">${columns.join("")}</div>
-    </div>
-    <div class="flex items-center gap-1.5 mt-3 text-xs" style="color:var(--muted)">
-      Fewer ${legend} more notes created per day
+    <div class="overflow-x-auto">
+      <div class="heat-wrap">
+        <div class="heat-months" style="grid-template-columns: repeat(${columns.length}, var(--heat-step))">${labels}</div>
+        <div class="flex" style="gap:var(--heat-gap)">
+          <div class="heat-days">${dayLabel("Mon")}${dayLabel("")}${dayLabel("Wed")}${dayLabel("")}${dayLabel("Fri")}${dayLabel("")}${dayLabel("")}</div>
+          ${columns.join("")}
+        </div>
+        <div class="flex items-center justify-between mt-4 text-xs" style="color:var(--muted)">
+          <span><strong style="color:var(--text)">${fmt(total)}</strong> notes created in the last 12 months${busiestDate ? ` · busiest day: <strong style="color:var(--accent-text)">${busiestDate}</strong> (${busiest.count} notes)` : ""}</span>
+          <span class="flex items-center gap-1">Less ${legend} More</span>
+        </div>
+      </div>
     </div>`;
 }
 
@@ -213,9 +246,15 @@ function generateHtml(stats, outputFilePath) {
     #backToTop { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 3.25rem; height: 3.25rem; border-radius: 9999px; background: var(--accent); color: #fff; font-size: 1.4rem; font-weight: 700; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(229, 0, 125, 0.4); opacity: 0; pointer-events: none; transition: opacity .3s, transform .2s; z-index: 50; }
     #backToTop.show { opacity: 1; pointer-events: auto; }
     #backToTop:hover { transform: translateY(-2px); }
-    .heat-col { display: flex; flex-direction: column; gap: 3px; }
-    .heat-cell { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
-    .heat-months { display: grid; grid-auto-flow: column; font-size: 0.7rem; color: var(--muted); margin-bottom: 4px; }
+    :root { --heat-cell: 14px; --heat-gap: 3px; --heat-step: calc(var(--heat-cell) + var(--heat-gap)); }
+    .heat-wrap { width: max-content; margin: 0 auto; }
+    .heat-col { display: flex; flex-direction: column; gap: var(--heat-gap); }
+    .heat-cell { width: var(--heat-cell); height: var(--heat-cell); border-radius: 3px; display: inline-block; }
+    .heat-cell:hover { outline: 1px solid rgba(255, 255, 255, 0.5); }
+    .heat-days { display: flex; flex-direction: column; gap: var(--heat-gap); margin-right: 6px; }
+    .heat-daylabel { height: var(--heat-cell); font-size: 10px; line-height: var(--heat-cell); color: var(--muted); text-align: right; width: 26px; }
+    .heat-months { display: grid; grid-auto-flow: column; font-size: 0.7rem; color: var(--muted); margin-bottom: 6px; margin-left: 32px; }
+    @media (max-width: 900px) { :root { --heat-cell: 10px; } }
     .bar-fill { transform-origin: left; animation: growbar 1s ease both; }
     @keyframes growbar { from { transform: scaleX(0); } }
     .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
@@ -300,11 +339,10 @@ function generateHtml(stats, outputFilePath) {
 
     <!-- Activity heatmap -->
     <section class="mt-14">
-      <h2 class="section-title reveal">Creation activity — last 12 months</h2>
-      <div class="card p-6 mt-6 reveal">
-        <div class="chart-well">
+      <h2 class="section-title reveal">Creation activity</h2>
+      <p class="mt-2 text-sm reveal" style="color:var(--muted)">One square per day, last 12 months — darker to brighter magenta = more notes created.</p>
+      <div class="card p-6 md:p-8 mt-6 reveal">
         ${buildHeatmap(activity.created_by_day)}
-        </div>
       </div>
     </section>
 
