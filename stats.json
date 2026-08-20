@@ -1,0 +1,653 @@
+{
+  "overall": {
+    "total_notes": 18420,
+    "total_words": 10611194,
+    "reading_time": {
+      "minutes": 42444.776,
+      "formatted": "707 hours, 25 minutes"
+    },
+    "books_equivalent": 117.90215555555555,
+    "content_age": {
+      "average_days": {
+        "days": null,
+        "formatted": ""
+      },
+      "oldest_note": {
+        "days": 1591,
+        "formatted": "4 years, 4 months, 1 day",
+        "date": "2022-04-12"
+      },
+      "newest_note": {
+        "days": 0,
+        "formatted": "",
+        "date": "2026-08-20"
+      },
+      "updates": {
+        "last_week": {
+          "count": 511,
+          "percentage": "2.8"
+        },
+        "last_month": {
+          "count": 3269,
+          "percentage": "17.7"
+        },
+        "last_quarter": {
+          "count": 9406,
+          "percentage": "51.1"
+        },
+        "last_year": {
+          "count": 18420,
+          "percentage": "100.0"
+        },
+        "this_year": {
+          "count": 18420,
+          "percentage": "100.0"
+        }
+      }
+    },
+    "links": {
+      "internal": {
+        "count": 166818,
+        "average": "9.1"
+      },
+      "external": {
+        "count": 33015,
+        "average": "1.8"
+      }
+    },
+    "note_types": {
+      "type/contact": {
+        "count": 3477,
+        "formatted_name": "Contact Type"
+      },
+      "type/permanent_note": {
+        "count": 3332,
+        "formatted_name": "Permanent Note Type"
+      },
+      "type/quote": {
+        "count": 2472,
+        "formatted_name": "Quote Type"
+      },
+      "type/periodic_note/daily": {
+        "count": 1765,
+        "formatted_name": "Daily Periodic Note Type"
+      },
+      "type/task": {
+        "count": 1348,
+        "formatted_name": "Task Type"
+      },
+      "type/person": {
+        "count": 1005,
+        "formatted_name": "Person Type"
+      },
+      "type/creation/quote": {
+        "count": 378,
+        "formatted_name": "Quote Creation Type"
+      },
+      "type/creation/article": {
+        "count": 331,
+        "formatted_name": "Article Creation Type"
+      },
+      "type/literature_note": {
+        "count": 321,
+        "formatted_name": "Literature Note Type"
+      },
+      "type/periodic_note/weekly": {
+        "count": 257,
+        "formatted_name": "Weekly Periodic Note Type"
+      },
+      "type/creation/newsletter": {
+        "count": 225,
+        "formatted_name": "Newsletter Creation Type"
+      },
+      "type/project": {
+        "count": 211,
+        "formatted_name": "Project Type"
+      },
+      "type/map": {
+        "count": 169,
+        "formatted_name": "Map Type"
+      },
+      "type/map/moc": {
+        "count": 169,
+        "formatted_name": "Moc Map Type"
+      },
+      "type/fleeting_note": {
+        "count": 147,
+        "formatted_name": "Fleeting Note Type"
+      },
+      "type/creation/video": {
+        "count": 72,
+        "formatted_name": "Video Creation Type"
+      },
+      "type/goal": {
+        "count": 64,
+        "formatted_name": "Goal Type"
+      },
+      "type/expression": {
+        "count": 63,
+        "formatted_name": "Expression Type"
+      },
+      "type/periodic_note/monthly": {
+        "count": 57,
+        "formatted_name": "Monthly Periodic Note Type"
+      },
+      "type/book": {
+        "count": 51,
+        "formatted_name": "Book Type"
+      },
+      "type/private": {
+        "count": 48,
+        "formatted_name": "Private Type"
+      },
+      "type/process": {
+        "count": 46,
+        "formatted_name": "Process Type"
+      },
+      "type/personal": {
+        "count": 32,
+        "formatted_name": "Personal Type"
+      },
+      "type/meeting": {
+        "count": 28,
+        "formatted_name": "Meeting Type"
+      },
+      "type/periodic_note/quarterly": {
+        "count": 19,
+        "formatted_name": "Quarterly Periodic Note Type"
+      },
+      "type/dot": {
+        "count": 19,
+        "formatted_name": "Dot Type"
+      },
+      "type/ai/prompt": {
+        "count": 12,
+        "formatted_name": "Prompt Ai Type"
+      },
+      "type/creation/poem": {
+        "count": 9,
+        "formatted_name": "Poem Creation Type"
+      },
+      "type/periodic_note/yearly": {
+        "count": 8,
+        "formatted_name": "Yearly Periodic Note Type"
+      },
+      "type/routine": {
+        "count": 6,
+        "formatted_name": "Routine Type"
+      },
+      "type/maintenance": {
+        "count": 4,
+        "formatted_name": "Maintenance Type"
+      },
+      "type/creation/book": {
+        "count": 3,
+        "formatted_name": "Book Creation Type"
+      },
+      "type/plan": {
+        "count": 2,
+        "formatted_name": "Plan Type"
+      },
+      "type/poem": {
+        "count": 2,
+        "formatted_name": "Poem Type"
+      }
+    },
+    "periodic_notes": {
+      "daily": {
+        "count": 1767,
+        "words": 570279,
+        "average_words": 323,
+        "internal_links": 25564,
+        "average_internal_links": 14.467458970005659,
+        "books": 6.336433333333333,
+        "reading_minutes": 2281.116,
+        "reading_hours": 38.0186,
+        "reading_time": {
+          "minutes": 2281.116,
+          "formatted": "38 hours, 1 minute"
+        },
+        "books_equivalent": "6.34"
+      },
+      "weekly": {
+        "count": 257,
+        "words": 234415,
+        "average_words": 912,
+        "internal_links": 18994,
+        "average_internal_links": 73.90661478599222,
+        "books": 2.604611111111111,
+        "reading_minutes": 937.66,
+        "reading_hours": 15.627666666666666,
+        "reading_time": {
+          "minutes": 937.66,
+          "formatted": "15 hours, 38 minutes"
+        },
+        "books_equivalent": "2.60"
+      },
+      "monthly": {
+        "count": 57,
+        "words": 167797,
+        "average_words": 2944,
+        "internal_links": 16918,
+        "average_internal_links": 296.8070175438597,
+        "books": 1.864411111111111,
+        "reading_minutes": 671.188,
+        "reading_hours": 11.186466666666666,
+        "reading_time": {
+          "minutes": 671.188,
+          "formatted": "11 hours, 11 minutes"
+        },
+        "books_equivalent": "1.86"
+      },
+      "yearly": {
+        "count": 8,
+        "words": 175881,
+        "average_words": 21985,
+        "internal_links": 14481,
+        "average_internal_links": 1810.125,
+        "books": 1.9542333333333333,
+        "reading_minutes": 703.524,
+        "reading_hours": 11.7254,
+        "reading_time": {
+          "minutes": 703.524,
+          "formatted": "11 hours, 44 minutes"
+        },
+        "books_equivalent": "1.95"
+      }
+    },
+    "folders": {
+      "count": 901,
+      "top_folders": {
+        "30 Areas/36 People/36.02 Customers": {
+          "words": 529129,
+          "internal_links": 13,
+          "note_count": 3464,
+          "reading_time": {
+            "minutes": 2117,
+            "formatted": "35 hours, 17 minutes"
+          },
+          "books_equivalent": "5.88",
+          "growth_rate": "180.7"
+        },
+        "30 Areas/33 Permanent notes/33.02 Content": {
+          "words": 1423519,
+          "internal_links": 28711,
+          "note_count": 3331,
+          "reading_time": {
+            "minutes": 5694,
+            "formatted": "94 hours, 54 minutes"
+          },
+          "books_equivalent": "15.82",
+          "growth_rate": "69.3"
+        },
+        "30 Areas/32 Literature notes/32.05 Quotes": {
+          "words": 218099,
+          "internal_links": 4405,
+          "note_count": 2473,
+          "reading_time": {
+            "minutes": 872,
+            "formatted": "14 hours, 32 minutes"
+          },
+          "books_equivalent": "2.42",
+          "growth_rate": "51.5"
+        },
+        "30 Areas/36 People": {
+          "words": 247676,
+          "internal_links": 6015,
+          "note_count": 1006,
+          "reading_time": {
+            "minutes": 991,
+            "formatted": "16 hours, 31 minutes"
+          },
+          "books_equivalent": "2.75",
+          "growth_rate": "35.3"
+        },
+        "20 Actions/24 Tasks/2026/06": {
+          "words": 104873,
+          "internal_links": 176,
+          "note_count": 804,
+          "reading_time": {
+            "minutes": 419,
+            "formatted": "6 hours, 59 minutes"
+          },
+          "books_equivalent": "1.17",
+          "growth_rate": "305.3"
+        },
+        "30 Areas/33 Permanent notes/33.04 Creations/Quotes": {
+          "words": 38179,
+          "internal_links": 473,
+          "note_count": 379,
+          "reading_time": {
+            "minutes": 153,
+            "formatted": "2 hours, 33 minutes"
+          },
+          "books_equivalent": "0.42",
+          "growth_rate": "7.9"
+        },
+        "30 Areas/33 Permanent notes/33.04 Creations/Articles": {
+          "words": 818108,
+          "internal_links": 8493,
+          "note_count": 337,
+          "reading_time": {
+            "minutes": 3272,
+            "formatted": "54 hours, 32 minutes"
+          },
+          "books_equivalent": "9.09",
+          "growth_rate": "11.8"
+        },
+        "30 Areas/32 Literature notes/32.02 Content": {
+          "words": 58883,
+          "internal_links": 734,
+          "note_count": 321,
+          "reading_time": {
+            "minutes": 236,
+            "formatted": "3 hours, 56 minutes"
+          },
+          "books_equivalent": "0.65",
+          "growth_rate": "6.7"
+        },
+        "20 Actions/24 Tasks/2026/07": {
+          "words": 49282,
+          "internal_links": 154,
+          "note_count": 289,
+          "reading_time": {
+            "minutes": 197,
+            "formatted": "3 hours, 17 minutes"
+          },
+          "books_equivalent": "0.55",
+          "growth_rate": "180.6"
+        },
+        "30 Areas/32 Literature notes/32.03 Book notes": {
+          "words": 104091,
+          "internal_links": 1266,
+          "note_count": 262,
+          "reading_time": {
+            "minutes": 416,
+            "formatted": "6 hours, 56 minutes"
+          },
+          "books_equivalent": "1.16",
+          "growth_rate": "9.2"
+        },
+        "10 Meta/99 AI Assistant/Wikis/PKM": {
+          "words": 222149,
+          "internal_links": 2990,
+          "note_count": 251,
+          "reading_time": {
+            "minutes": 889,
+            "formatted": "14 hours, 49 minutes"
+          },
+          "books_equivalent": "2.47",
+          "growth_rate": "55.8"
+        },
+        "30 Areas/33 Permanent notes/33.04 Creations/Newsletters": {
+          "words": 410052,
+          "internal_links": 3152,
+          "note_count": 227,
+          "reading_time": {
+            "minutes": 1640,
+            "formatted": "27 hours, 20 minutes"
+          },
+          "books_equivalent": "4.56",
+          "growth_rate": "8.0"
+        },
+        "30 Areas/34 Maps/34.01 MoCs": {
+          "words": 214823,
+          "internal_links": 20748,
+          "note_count": 170,
+          "reading_time": {
+            "minutes": 859,
+            "formatted": "14 hours, 19 minutes"
+          },
+          "books_equivalent": "2.39",
+          "growth_rate": "6.0"
+        },
+        "30 Areas/33 Permanent notes/33.04 Creations/Courses/Knowledge Management for Beginners/Transcripts": {
+          "words": 219860,
+          "internal_links": 0,
+          "note_count": 151,
+          "reading_time": {
+            "minutes": 879,
+            "formatted": "14 hours, 39 minutes"
+          },
+          "books_equivalent": "2.44",
+          "growth_rate": "9.3"
+        },
+        "30 Areas/31 Fleeting notes": {
+          "words": 51325,
+          "internal_links": 171,
+          "note_count": 151,
+          "reading_time": {
+            "minutes": 205,
+            "formatted": "3 hours, 25 minutes"
+          },
+          "books_equivalent": "0.57",
+          "growth_rate": "5.3"
+        }
+      }
+    },
+    "tags": {
+      "total": 2986,
+      "total_area_notes": 12862,
+      "notes_without_tags": {
+        "count": 242,
+        "percentage": "1.9"
+      },
+      "average_per_note": "5.3",
+      "top_tags": {}
+    },
+    "mocs": {
+      "count": 1,
+      "average_links": "3.0"
+    },
+    "voice_notes": 5,
+    "total_tasks": 7728,
+    "special_files": {
+      "canvases": 31,
+      "templates": 54,
+      "attachments": {
+        "public": 3197,
+        "private": 848
+      }
+    },
+    "size": {
+      "total_bytes": 1075847083,
+      "md_files_bytes": 78147757,
+      "attachments_bytes": 996466900,
+      "git_commits": 2717
+    }
+  },
+  "publication": {
+    "total_published": 12288,
+    "published_words": 3963203,
+    "reading_time": {
+      "minutes": 15852.812,
+      "formatted": "264 hours, 13 minutes"
+    },
+    "books_equivalent": 44.03558888888889,
+    "topics": {
+      "ai": {
+        "count": 1247,
+        "formatted_name": "Ai",
+        "growth_rate": "93.1"
+      },
+      "pkm": {
+        "count": 838,
+        "formatted_name": "Pkm",
+        "growth_rate": "35.8"
+      },
+      "tools": {
+        "count": 835,
+        "formatted_name": "Tools",
+        "growth_rate": "35.1"
+      },
+      "knowledge_management": {
+        "count": 814,
+        "formatted_name": "Knowledge Management",
+        "growth_rate": "34.8"
+      },
+      "personal_development": {
+        "count": 786,
+        "formatted_name": "Personal Development",
+        "growth_rate": "32.8"
+      },
+      "software_development": {
+        "count": 554,
+        "formatted_name": "Software Development",
+        "growth_rate": "39.9"
+      },
+      "learning": {
+        "count": 386,
+        "formatted_name": "Learning",
+        "growth_rate": "16.1"
+      },
+      "obsidian": {
+        "count": 367,
+        "formatted_name": "Obsidian",
+        "growth_rate": "25.9"
+      },
+      "productivity": {
+        "count": 348,
+        "formatted_name": "Productivity",
+        "growth_rate": "14.9"
+      },
+      "work": {
+        "count": 343,
+        "formatted_name": "Work",
+        "growth_rate": "14.3"
+      },
+      "life": {
+        "count": 319,
+        "formatted_name": "Life",
+        "growth_rate": "13.3"
+      },
+      "concepts": {
+        "count": 294,
+        "formatted_name": "Concepts",
+        "growth_rate": "12.2"
+      },
+      "success": {
+        "count": 286,
+        "formatted_name": "Success",
+        "growth_rate": "11.9"
+      },
+      "writing": {
+        "count": 265,
+        "formatted_name": "Writing",
+        "growth_rate": "29.1"
+      },
+      "progress": {
+        "count": 226,
+        "formatted_name": "Progress",
+        "growth_rate": "9.4"
+      },
+      "psychology": {
+        "count": 221,
+        "formatted_name": "Psychology",
+        "growth_rate": "9.2"
+      },
+      "note_taking": {
+        "count": 214,
+        "formatted_name": "Note Taking",
+        "growth_rate": "9.2"
+      },
+      "entrepreneurship": {
+        "count": 208,
+        "formatted_name": "Entrepreneurship",
+        "growth_rate": "8.7"
+      },
+      "thinking": {
+        "count": 201,
+        "formatted_name": "Thinking",
+        "growth_rate": "8.4"
+      },
+      "open_source": {
+        "count": 198,
+        "formatted_name": "Open Source",
+        "growth_rate": "14.2"
+      },
+      "business": {
+        "count": 192,
+        "formatted_name": "Business",
+        "growth_rate": "8.0"
+      },
+      "content_creation": {
+        "count": 181,
+        "formatted_name": "Content Creation",
+        "growth_rate": "7.5"
+      },
+      "osk": {
+        "count": 165,
+        "formatted_name": "Osk",
+        "growth_rate": "6.4"
+      },
+      "knowledge": {
+        "count": 161,
+        "formatted_name": "Knowledge",
+        "growth_rate": "6.7"
+      },
+      "action": {
+        "count": 161,
+        "formatted_name": "Action",
+        "growth_rate": "6.7"
+      }
+    },
+    "published_by_year": {
+      "2022": 121,
+      "2023": 19,
+      "2024": 3268,
+      "2025": 3172,
+      "2026": 2511
+    },
+    "published_by_month": {
+      "2025-12": 55,
+      "2025-11": 211,
+      "2026-05": 368,
+      "2026-06": 217,
+      "2024-04": 157,
+      "2025-10": 125,
+      "2026-02": 243,
+      "2024-08": 183,
+      "2025-03": 29,
+      "2024-06": 759,
+      "2025-06": 144,
+      "2026-03": 524,
+      "2026-04": 510,
+      "2024-12": 284,
+      "2025-01": 2158,
+      "2024-07": 147,
+      "2026-08": 137,
+      "2026-01": 437,
+      "2025-05": 151,
+      "2024-10": 38,
+      "2025-02": 126,
+      "2024-05": 1300,
+      "2025-08": 46,
+      "2025-07": 77,
+      "2026-07": 75,
+      "2024-11": 384,
+      "2025-09": 44,
+      "2022-09": 93,
+      "2022-10": 4,
+      "2024-02": 4,
+      "2023-11": 3,
+      "2023-06": 3,
+      "2023-12": 1,
+      "2024-01": 4,
+      "2023-01": 5,
+      "2023-07": 2,
+      "2024-09": 7,
+      "2023-08": 1,
+      "2022-11": 1,
+      "2023-02": 1,
+      "2023-10": 2,
+      "2022-12": 1,
+      "2022-07": 3,
+      "2022-06": 1,
+      "2022-05": 4,
+      "2022-04": 14,
+      "2025-04": 6,
+      "2024-03": 1,
+      "2023-09": 1
+    }
+  }
+}
