@@ -219,7 +219,7 @@ function generateHtml(stats, outputFilePath) {
       --text: #ffffff;
       --muted: rgba(255, 255, 255, 0.64);
       --accent: #e5007d;
-      --accent-text: #ff4fa8;
+      --accent-text: #ff1493;
       --series-magenta: #ff1493;
       --series-blue: #4f94d4;
       --series-green: #2e9e6b;
