@@ -306,7 +306,7 @@ function generateHtml(stats, outputFilePath) {
         <div class="card p-6 reveal">
           <h3 class="font-bold mb-4">Notes by type <span class="text-sm font-normal" style="color:var(--muted)">(top 12)</span></h3>
           <div class="space-y-2.5">
-            ${noteTypes.map(([, d]) => barRow(d.formatted_name, d.count, maxType, "var(--series-indigo)")).join("")}
+            ${noteTypes.map(([, d]) => barRow(d.formatted_name.replace(/ Type$/, ""), d.count, maxType, "var(--series-indigo)")).join("")}
           </div>
         </div>
         <div class="flex flex-col gap-6">
