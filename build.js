@@ -30,7 +30,7 @@ function cumulative(entries) {
 // ---------------------------------------------------------------
 // GitHub-style activity heatmap, rendered server-side
 // ---------------------------------------------------------------
-const HEAT_RAMP = ["#171c26", "#232e63", "#2a3a8a", "#4256c4", "#6273de", "#93a2f2"];
+const HEAT_RAMP = ["#343c48", "#5c1440", "#8a1059", "#c00c73", "#ff1493", "#ff6ab8"];
 
 function heatColor(count, max) {
   if (!count) return HEAT_RAMP[0];
@@ -102,7 +102,7 @@ function barRow(label, count, max, hue) {
   return `
     <div class="flex items-center gap-3 group">
       <span class="w-44 shrink-0 text-sm text-right truncate" style="color:var(--text)">${label}</span>
-      <div class="flex-1 h-5 rounded-r overflow-hidden" style="background:rgba(247,243,236,0.04)">
+      <div class="flex-1 h-5 rounded-r overflow-hidden" style="background:rgba(0,0,0,0.25)">
         <div class="h-full rounded-r bar-fill" style="width:${pct}%;background:${hue}"></div>
       </div>
       <span class="w-16 shrink-0 text-sm font-mono" style="color:var(--muted)">${fmt(count)}</span>
@@ -176,29 +176,36 @@ function generateHtml(stats, outputFilePath) {
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
     :root {
-      --bg: #0e1117;
-      --surface: #151a23;
-      --border: rgba(247, 243, 236, 0.07);
-      --text: #f7f3ec;
-      --muted: #8a8f99;
-      --accent: #f08a3e;
-      --primary: #2a3a8a;
-      --series-orange: #d9701f;
-      --series-indigo: #6273de;
+      --bg: #37404c;
+      --surface: #3f4957;
+      --surface-elevated: #475363;
+      --well: #2b323c;
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.64);
+      --accent: #e5007d;
+      --accent-text: #ff4fa8;
+      --series-magenta: #ff1493;
+      --series-blue: #4f94d4;
       --series-green: #2e9e6b;
     }
     html { color-scheme: dark; scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--text); font-family: "Noto Sans", "Inter", "Segoe UI", system-ui, sans-serif; }
     .font-mono, .stat-number { font-family: "JetBrains Mono", "Fira Code", monospace; }
     .card { background: var(--surface); border: 1px solid var(--border); border-radius: 0.75rem; transition: transform .25s ease, border-color .25s ease; }
-    .card:hover { transform: translateY(-2px); border-color: rgba(240, 138, 62, 0.35); }
+    .card:hover { transform: translateY(-2px); border-color: rgba(255, 20, 147, 0.4); }
+    .chart-well { background: var(--well); border-radius: 0.5rem; padding: 1rem; }
     .stat-number { font-size: 2rem; font-weight: 600; color: var(--text); }
-    .stat-accent { color: var(--accent); }
+    .stat-accent { color: var(--accent-text); }
     .section-title { font-size: 1.5rem; font-weight: 800; }
-    .section-title .hash { color: var(--accent); }
-    .hero-glow { background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(42, 58, 138, 0.55), transparent 70%), radial-gradient(ellipse 40% 30% at 80% 10%, rgba(240, 138, 62, 0.12), transparent 70%); }
-    .chip { background: rgba(98, 115, 222, 0.12); border: 1px solid rgba(98, 115, 222, 0.3); border-radius: 9999px; transition: border-color .2s; }
-    .chip:hover { border-color: var(--accent); }
+    .section-title .hash { color: var(--accent-text); }
+    .hero-glow { background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(229, 0, 125, 0.28), transparent 70%), radial-gradient(ellipse 40% 30% at 85% 15%, rgba(79, 148, 212, 0.15), transparent 70%); }
+    .chip { background: rgba(255, 20, 147, 0.1); border: 1px solid rgba(255, 20, 147, 0.35); border-radius: 9999px; transition: border-color .2s; }
+    .chip:hover { border-color: var(--accent-text); }
+    .btn-primary { background: var(--accent); color: #fff; font-weight: 700; border-radius: 0.5rem; padding: 0.75rem 1.5rem; display: inline-block; transition: filter .2s, transform .2s; }
+    .btn-primary:hover { filter: brightness(1.15); transform: translateY(-1px); text-decoration: none; }
+    .btn-secondary { border: 1px solid var(--accent-text); color: var(--accent-text); font-weight: 700; border-radius: 0.5rem; padding: 0.75rem 1.5rem; display: inline-block; transition: background .2s; }
+    .btn-secondary:hover { background: rgba(255, 20, 147, 0.1); text-decoration: none; }
     .heat-col { display: flex; flex-direction: column; gap: 3px; }
     .heat-cell { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
     .heat-months { display: grid; grid-auto-flow: column; font-size: 0.7rem; color: var(--muted); margin-bottom: 4px; }
@@ -211,7 +218,7 @@ function generateHtml(stats, outputFilePath) {
       .bar-fill { animation: none; }
       html { scroll-behavior: auto; }
     }
-    a { color: var(--accent); }
+    a { color: var(--accent-text); }
     a:hover { text-decoration: underline; }
   </style>
 </head>
@@ -219,7 +226,7 @@ function generateHtml(stats, outputFilePath) {
   <!-- Hero -->
   <header class="hero-glow border-b" style="border-color:var(--border)">
     <div class="max-w-6xl mx-auto px-4 pt-16 pb-12 text-center">
-      <p class="text-sm font-semibold uppercase tracking-[0.25em]" style="color:var(--accent)">Knowii · DeveloPassion</p>
+      <p class="text-sm font-semibold uppercase tracking-[0.25em]" style="color:var(--accent-text)">DeveloPassion</p>
       <h1 class="text-4xl md:text-5xl font-extrabold mt-3">Knowledge Base Statistics</h1>
       <p class="mt-4 max-w-2xl mx-auto" style="color:var(--muted)">
         A living window into <a href="https://notes.dsebastien.net">notes.dsebastien.net</a> —
@@ -254,13 +261,13 @@ function generateHtml(stats, outputFilePath) {
         <div class="card p-6 reveal">
           <h3 class="font-bold">Cumulative notes</h3>
           <p class="text-sm mb-4" style="color:var(--muted)">Every note ever created, stacked up month after month</p>
-          <canvas id="growthChart" height="220" role="img" aria-label="Cumulative number of notes created per month"></canvas>
+          <div class="chart-well"><canvas id="growthChart" height="220" role="img" aria-label="Cumulative number of notes created per month"></canvas></div>
           ${dataTable("Cumulative notes by month", growthSeries)}
         </div>
         <div class="card p-6 reveal">
           <h3 class="font-bold">Notes published per month</h3>
           <p class="text-sm mb-4" style="color:var(--muted)">Additions to the public garden</p>
-          <canvas id="publishedChart" height="220" role="img" aria-label="Notes published per month"></canvas>
+          <div class="chart-well"><canvas id="publishedChart" height="220" role="img" aria-label="Notes published per month"></canvas></div>
           ${dataTable("Notes published by month", publishedMonthly)}
         </div>
       </div>
@@ -270,7 +277,9 @@ function generateHtml(stats, outputFilePath) {
     <section class="mt-14">
       <h2 class="section-title reveal"><span class="hash">#</span> Creation activity — last 12 months</h2>
       <div class="card p-6 mt-6 reveal">
+        <div class="chart-well">
         ${buildHeatmap(activity.created_by_day)}
+        </div>
       </div>
     </section>
 
@@ -281,17 +290,17 @@ function generateHtml(stats, outputFilePath) {
       <div class="card p-6 mt-6 reveal">
         <div class="flex flex-col md:flex-row md:items-center gap-6">
           <div class="text-center md:text-left shrink-0">
-            <p class="text-5xl font-extrabold font-mono" style="color:var(--accent)">${ratio.percentage}%</p>
+            <p class="text-5xl font-extrabold font-mono" style="color:var(--accent-text)">${ratio.percentage}%</p>
             <p class="text-sm mt-1" style="color:var(--muted)">of all notes are published</p>
           </div>
           <div class="flex-1">
             <div class="flex h-6 rounded overflow-hidden" style="gap:2px" role="img" aria-label="${fmt(ratio.public)} public notes versus ${fmt(ratio.private)} private notes">
-              <div style="width:${ratio.percentage}%;background:var(--series-orange)"></div>
-              <div class="flex-1" style="background:rgba(138,143,153,0.35)"></div>
+              <div style="width:${ratio.percentage}%;background:var(--accent)"></div>
+              <div class="flex-1" style="background:rgba(255,255,255,0.2)"></div>
             </div>
             <div class="flex justify-between text-sm mt-2" style="color:var(--muted)">
-              <span><span class="inline-block w-2.5 h-2.5 rounded-sm mr-1.5" style="background:var(--series-orange)"></span>${fmt(ratio.public)} public notes</span>
-              <span>${fmt(ratio.private)} private notes <span class="inline-block w-2.5 h-2.5 rounded-sm ml-1.5" style="background:rgba(138,143,153,0.35)"></span></span>
+              <span><span class="inline-block w-2.5 h-2.5 rounded-sm mr-1.5" style="background:var(--accent)"></span>${fmt(ratio.public)} public notes</span>
+              <span>${fmt(ratio.private)} private notes <span class="inline-block w-2.5 h-2.5 rounded-sm ml-1.5" style="background:rgba(255,255,255,0.2)"></span></span>
             </div>
             <p class="text-sm mt-3" style="color:var(--muted)">Learning in public: half of everything captured ends up freely readable by anyone.</p>
           </div>
@@ -305,15 +314,15 @@ function generateHtml(stats, outputFilePath) {
       <div class="grid lg:grid-cols-2 gap-6 mt-6">
         <div class="card p-6 reveal">
           <h3 class="font-bold mb-4">Notes by type <span class="text-sm font-normal" style="color:var(--muted)">(top 12)</span></h3>
-          <div class="space-y-2.5">
-            ${noteTypes.map(([, d]) => barRow(d.formatted_name.replace(/ Type$/, ""), d.count, maxType, "var(--series-indigo)")).join("")}
+          <div class="chart-well space-y-2.5">
+            ${noteTypes.map(([, d]) => barRow(d.formatted_name.replace(/ Type$/, ""), d.count, maxType, "var(--series-magenta)")).join("")}
           </div>
         </div>
         <div class="flex flex-col gap-6">
           <div class="card p-6 reveal">
             <h3 class="font-bold mb-4">Note age distribution</h3>
-            <div class="space-y-2.5">
-              ${ageEntries.map(([k, v]) => barRow(AGE_LABELS[k] || k, v, maxAge, "var(--series-green)")).join("")}
+            <div class="chart-well space-y-2.5">
+              ${ageEntries.map(([k, v]) => barRow(AGE_LABELS[k] || k, v, maxAge, "var(--series-blue)")).join("")}
             </div>
             <p class="text-sm mt-4" style="color:var(--muted)">A living garden: ${(((ageDist["0-1m"] || 0) + (ageDist["1-6m"] || 0)) / Math.max(1, o.total_notes) * 100).toFixed(0)}% of notes are less than 6 months old.</p>
           </div>
@@ -353,8 +362,8 @@ function generateHtml(stats, outputFilePath) {
       <div class="card p-6 mt-6 reveal">
         <h3 class="font-bold">Journaling discipline</h3>
         <p class="text-sm mt-2" style="color:var(--muted)">
-          Current daily-note streak: <strong style="color:var(--accent)">${fmt(streak.current)} days</strong> ·
-          Longest streak ever: <strong style="color:var(--accent)">${fmt(streak.longest)} days</strong>
+          Current daily-note streak: <strong style="color:var(--accent-text)">${fmt(streak.current)} days</strong> ·
+          Longest streak ever: <strong style="color:var(--accent-text)">${fmt(streak.longest)} days</strong>
           ${streak.longest > 365 ? ` — that's ${(streak.longest / 365).toFixed(1)} years without missing a single day.` : ""}
         </p>
       </div>
@@ -369,9 +378,9 @@ function generateHtml(stats, outputFilePath) {
             <h3 class="text-sm font-bold truncate" title="${folder}">${folder.split("/").pop()}</h3>
             <p class="text-xs truncate" style="color:var(--muted)">${folder}</p>
             <div class="grid grid-cols-3 gap-2 mt-3 text-center">
-              <div><p class="text-lg font-mono font-semibold" style="color:var(--series-indigo)">${fmt(d.note_count)}</p><p class="text-xs" style="color:var(--muted)">notes</p></div>
-              <div><p class="text-lg font-mono font-semibold" style="color:var(--series-indigo)">${fmt(d.words)}</p><p class="text-xs" style="color:var(--muted)">words</p></div>
-              <div><p class="text-lg font-mono font-semibold" style="color:var(--series-indigo)">${d.growth_rate}</p><p class="text-xs" style="color:var(--muted)">new/month</p></div>
+              <div><p class="text-lg font-mono font-semibold" style="color:var(--text)">${fmt(d.note_count)}</p><p class="text-xs" style="color:var(--muted)">notes</p></div>
+              <div><p class="text-lg font-mono font-semibold" style="color:var(--text)">${fmt(d.words)}</p><p class="text-xs" style="color:var(--muted)">words</p></div>
+              <div><p class="text-lg font-mono font-semibold" style="color:var(--text)">${d.growth_rate}</p><p class="text-xs" style="color:var(--muted)">new/month</p></div>
             </div>
           </div>`).join("")}
       </div>
@@ -384,7 +393,7 @@ function generateHtml(stats, outputFilePath) {
         <div class="card p-6 reveal">
           <h3 class="font-bold">Git commits per month</h3>
           <p class="text-sm mb-4" style="color:var(--muted)">Version-controlled knowledge — last 24 months</p>
-          <canvas id="commitsChart" height="200" role="img" aria-label="Git commits per month over the last 24 months"></canvas>
+          <div class="chart-well"><canvas id="commitsChart" height="200" role="img" aria-label="Git commits per month over the last 24 months"></canvas></div>
         </div>
         <div class="grid grid-cols-2 gap-4 content-start">
           ${statCard("Vault size", formatBytes(o.size.total_bytes), `${formatBytes(o.size.md_files_bytes)} of markdown`)}
@@ -407,6 +416,20 @@ function generateHtml(stats, outputFilePath) {
         }).join("")}
       </div>
     </section>
+    <!-- CTA -->
+    <section class="mt-16 reveal">
+      <div class="card p-8 md:p-10 text-center" style="border-color:rgba(255,20,147,0.35)">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Want a knowledge base like this?</h2>
+        <p class="mt-3 max-w-2xl mx-auto" style="color:var(--muted)">
+          This entire system runs on the <strong style="color:var(--text)">Obsidian Starter Kit</strong> —
+          the same structure, templates and workflows behind every number on this page.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+          <a class="btn-primary" href="https://store.dsebastien.net/product/obsidian-starter-kit" style="color:#fff">Get the Obsidian Starter Kit</a>
+          <a class="btn-secondary" href="https://store.dsebastien.net/product/knowii-community">Join the Knowii Community</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="border-t py-10" style="border-color:var(--border)">
@@ -414,26 +437,25 @@ function generateHtml(stats, outputFilePath) {
       <p>
         <a href="https://notes.dsebastien.net">Public notes</a> ·
         <a href="https://www.dsebastien.net">Blog</a> ·
-        <a href="https://store.dsebastien.net">Store</a> ·
-        <a href="https://github.com/dsebastien/kb-stats">Source</a>
+        <a href="https://store.dsebastien.net">Store</a>
       </p>
-      <p class="mt-3">Rebuilt automatically from the vault by a Templater template + GitHub Actions. Crafted by <a href="https://www.dsebastien.net">Sébastien Dubois</a> / DeveloPassion.</p>
+      <p class="mt-3">Crafted by <a href="https://www.dsebastien.net">Sébastien Dubois</a> / DeveloPassion.</p>
     </div>
   </footer>
 
   <script>
     var DATA = ${JSON.stringify(chartData)};
-    var MUTED = "#8a8f99";
-    var GRID = "rgba(247,243,236,0.06)";
+    var MUTED = "rgba(255,255,255,0.64)";
+    var GRID = "rgba(255,255,255,0.07)";
 
     Chart.defaults.color = MUTED;
     Chart.defaults.font.family = '"Noto Sans", system-ui, sans-serif';
     Chart.defaults.plugins.legend.display = false;
-    Chart.defaults.plugins.tooltip.backgroundColor = "#151a23";
-    Chart.defaults.plugins.tooltip.borderColor = "rgba(247,243,236,0.15)";
+    Chart.defaults.plugins.tooltip.backgroundColor = "#2b323c";
+    Chart.defaults.plugins.tooltip.borderColor = "rgba(255,255,255,0.2)";
     Chart.defaults.plugins.tooltip.borderWidth = 1;
-    Chart.defaults.plugins.tooltip.titleColor = "#f7f3ec";
-    Chart.defaults.plugins.tooltip.bodyColor = "#f7f3ec";
+    Chart.defaults.plugins.tooltip.titleColor = "#ffffff";
+    Chart.defaults.plugins.tooltip.bodyColor = "#ffffff";
 
     function lineOpts(stepped) {
       return {
@@ -453,8 +475,8 @@ function generateHtml(stats, outputFilePath) {
         datasets: [{
           label: "Notes",
           data: DATA.growth.values,
-          borderColor: "#6273de",
-          backgroundColor: "rgba(98,115,222,0.12)",
+          borderColor: "#4f94d4",
+          backgroundColor: "rgba(79,148,212,0.15)",
           borderWidth: 2, pointRadius: 0, pointHoverRadius: 4, fill: true, tension: 0.3
         }]
       },
@@ -468,8 +490,8 @@ function generateHtml(stats, outputFilePath) {
         datasets: [{
           label: "Published",
           data: DATA.published.values,
-          borderColor: "#d9701f",
-          backgroundColor: "rgba(217,112,31,0.12)",
+          borderColor: "#ff1493",
+          backgroundColor: "rgba(255,20,147,0.14)",
           borderWidth: 2, pointRadius: 0, pointHoverRadius: 4, fill: true, tension: 0.3
         }]
       },
