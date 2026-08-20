@@ -177,7 +177,9 @@ function generateHtml(stats, outputFilePath) {
   const vaultYears = (vaultAgeDays / 365).toFixed(1);
   const readingDays = (o.reading_time.minutes / 60 / 24).toFixed(1);
 
-  const noteTypes = Object.entries(o.note_types).slice(0, 12);
+  const allNoteTypes = Object.entries(o.note_types);
+  const noteTypes = allNoteTypes.slice(0, 12);
+  const restNoteTypes = allNoteTypes.slice(12);
   const maxType = Math.max(...noteTypes.map(([, d]) => d.count));
   const ageEntries = Object.entries(ageDist);
   const maxAge = Math.max(1, ...ageEntries.map(([, v]) => v));
@@ -376,9 +378,16 @@ function generateHtml(stats, outputFilePath) {
       <h2 class="section-title reveal">What's inside</h2>
       <div class="grid lg:grid-cols-2 gap-6 mt-6">
         <div class="card p-6 reveal">
-          <h3 class="font-bold mb-4">Notes by type <span class="text-sm font-normal" style="color:var(--muted)">(top 12)</span></h3>
+          <h3 class="font-bold mb-4">Notes by type</h3>
           <div class="chart-well space-y-2.5">
             ${noteTypes.map(([, d]) => barRow(d.formatted_name.replace(/ Type$/, ""), d.count, maxType, "var(--series-magenta)")).join("")}
+            ${restNoteTypes.length ? `
+            <details class="pt-1">
+              <summary class="cursor-pointer text-sm font-semibold select-none" style="color:var(--accent-text)">Show all ${allNoteTypes.length} types</summary>
+              <div class="space-y-2.5 mt-3">
+                ${restNoteTypes.map(([, d]) => barRow(d.formatted_name.replace(/ Type$/, ""), d.count, maxType, "var(--series-magenta)")).join("")}
+              </div>
+            </details>` : ""}
           </div>
         </div>
         <div class="flex flex-col gap-6">
