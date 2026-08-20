@@ -142,6 +142,27 @@ function barRow(label, count, max, hue) {
     </div>`;
 }
 
+function titleCase(s) {
+  return String(s || "").replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function renderCtaCard(p) {
+  if (!p) return "";
+  const badge = p.badge ? `<span class="cta-card-badge">${titleCase(p.badge)}</span>` : "";
+  const media = p.image ? `<div class="cta-card-media"><img src="${p.image}" alt="${p.imageAlt || p.name}" loading="lazy" decoding="async"></div>` : "";
+  const kicker = [titleCase(p.priceTier), titleCase(p.mainCategory)].filter(Boolean).join(" · ");
+  return `<a class="cta-card reveal" href="${p.href}" target="_blank" rel="noopener">
+    ${media}
+    <div class="cta-card-body">
+      ${badge}
+      ${kicker ? `<span class="cta-card-kicker">${kicker}</span>` : ""}
+      <span class="cta-card-title">${p.name}</span>
+      ${p.shortDescription ? `<span class="cta-card-blurb">${p.shortDescription}</span>` : ""}
+      <span class="cta-card-more">Learn more →</span>
+    </div>
+  </a>`;
+}
+
 function dataTable(caption, rows) {
   return `
     <details class="mt-3 text-sm" style="color:var(--muted)">
@@ -158,7 +179,7 @@ function dataTable(caption, rows) {
 // ---------------------------------------------------------------
 // Page generation
 // ---------------------------------------------------------------
-function generateHtml(stats, outputFilePath) {
+function generateHtml(stats, ctaProducts, outputFilePath) {
   const o = stats.overall;
   const p = stats.publication;
   const activity = o.activity || {};
@@ -248,6 +269,15 @@ function generateHtml(stats, outputFilePath) {
     #backToTop { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 3.25rem; height: 3.25rem; border-radius: 9999px; background: var(--accent); color: #fff; font-size: 1.4rem; font-weight: 700; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(229, 0, 125, 0.4); opacity: 0; pointer-events: none; transition: opacity .3s, transform .2s; z-index: 50; }
     #backToTop.show { opacity: 1; pointer-events: auto; }
     #backToTop:hover { transform: translateY(-2px); }
+    a.cta-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); color: var(--text); text-decoration: none; text-align: left; transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease; }
+    a.cta-card:hover { border-color: var(--accent-text); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); text-decoration: none; }
+    .cta-card-media img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .cta-card-body { display: flex; flex: 1; flex-direction: column; gap: 0.35rem; padding: 1.25rem; }
+    .cta-card-badge { align-self: flex-start; border-radius: 999px; padding: 2px 10px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; background: var(--accent); }
+    .cta-card-kicker { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .cta-card-title { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+    .cta-card-blurb { font-size: 0.875rem; color: var(--muted); }
+    .cta-card-more { margin-top: auto; padding-top: 0.5rem; font-size: 0.875rem; font-weight: 600; color: var(--accent-text); }
     :root { --heat-cell: 14px; --heat-gap: 3px; --heat-step: calc(var(--heat-cell) + var(--heat-gap)); }
     .heat-wrap { width: max-content; margin: 0 auto; }
     .heat-col { display: flex; flex-direction: column; gap: var(--heat-gap); }
@@ -489,17 +519,18 @@ function generateHtml(stats, outputFilePath) {
       </div>
     </section>
     <!-- CTA -->
-    <section class="mt-16 reveal">
-      <div class="card p-8 md:p-10 text-center" style="border-color:rgba(255,20,147,0.35)">
-        <h2 class="text-2xl md:text-3xl font-extrabold">Want a knowledge base like this?</h2>
-        <p class="mt-3 max-w-2xl mx-auto" style="color:var(--muted)">
-          This entire system runs on the <strong style="color:var(--text)">Obsidian Starter Kit</strong> —
-          the same structure, templates and workflows behind every number on this page.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-          <a class="btn-primary" href="https://store.dsebastien.net/product/obsidian-starter-kit" style="color:#fff">Get the Obsidian Starter Kit</a>
-          <a class="btn-secondary" href="https://store.dsebastien.net/product/knowii-community">Join the Knowii Community</a>
-        </div>
+    <section class="mt-16 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold reveal">Want a knowledge base like this?</h2>
+      <p class="mt-3 max-w-2xl mx-auto reveal" style="color:var(--muted)">
+        This entire system runs on the <strong style="color:var(--text)">Obsidian Starter Kit</strong> —
+        the same structure, templates and workflows behind every number on this page.
+      </p>
+      ${ctaProducts.length ? `
+      <div class="grid sm:grid-cols-2 gap-6 mt-8 max-w-3xl mx-auto">
+        ${ctaProducts.map(renderCtaCard).join("")}
+      </div>` : ""}
+      <div class="mt-8 reveal">
+        <a class="btn-primary" href="https://store.dsebastien.net" style="color:#fff">Browse the store →</a>
       </div>
     </section>
   </main>
@@ -638,13 +669,31 @@ function generateHtml(stats, outputFilePath) {
 }
 
 // Main execution
-const jsonFile = path.join(__dirname, "stats.json");
-const outputHtmlFile = path.join(__dirname, "index.html");
+const CTA_SOURCE = "https://www.store.dsebastien.net/products-light.json";
+const CTA_PRODUCT_IDS = ["obsidian-starter-kit", "knowii-community"];
 
-if (fs.existsSync(jsonFile)) {
-  const stats = JSON.parse(fs.readFileSync(jsonFile, "utf-8"));
-  generateHtml(stats, outputHtmlFile);
-} else {
-  console.error(`JSON file not found: ${jsonFile}`);
-  process.exit(1);
+async function fetchCtaProducts() {
+  try {
+    const res = await fetch(CTA_SOURCE, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const items = Array.isArray(data) ? data : data.products || [];
+    return CTA_PRODUCT_IDS.map((id) => items.find((p) => p && p.id === id)).filter(Boolean);
+  } catch (e) {
+    console.warn("Store catalog unavailable, building without CTA cards:", e.message);
+    return [];
+  }
 }
+
+(async () => {
+  const jsonFile = path.join(__dirname, "stats.json");
+  const outputHtmlFile = path.join(__dirname, "index.html");
+
+  if (!fs.existsSync(jsonFile)) {
+    console.error(`JSON file not found: ${jsonFile}`);
+    process.exit(1);
+  }
+  const stats = JSON.parse(fs.readFileSync(jsonFile, "utf-8"));
+  const ctaProducts = await fetchCtaProducts();
+  generateHtml(stats, ctaProducts, outputHtmlFile);
+})();
