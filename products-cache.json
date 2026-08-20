@@ -1,0 +1,906 @@
+{
+  "$schema": "https://store.dsebastien.net/products-light.schema.json",
+  "generatedAt": "2026-08-20T18:37:02.101Z",
+  "count": 21,
+  "products": [
+    {
+      "id": "knowii-community",
+      "name": "Knowii: Complete Knowledge System & Community",
+      "shortDescription": "Master Information and AI in One Place",
+      "tags": [
+        "pkm",
+        "personal-knowledge-management",
+        "knowledge-management",
+        "knowledge-work",
+        "community",
+        "obsidian",
+        "courses",
+        "second-brain"
+      ],
+      "mainCategory": "community",
+      "priceTier": "subscription",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/knowii-community",
+      "badge": "flagship",
+      "featured": true,
+      "bestseller": true,
+      "bestValue": true,
+      "priority": 100,
+      "image": "https://store.dsebastien.net/assets/images/products/knowii-community/knowii-cover-main.webp",
+      "imageAlt": "Transform information chaos into your greatest advantage",
+      "pricing": {
+        "currency": "EUR",
+        "price": 14.99,
+        "priceDisplay": "From €14.99/quarter",
+        "isSubscription": true,
+        "defaultPaymentFrequency": "quarterly",
+        "variants": [
+          {
+            "name": "Explorer",
+            "price": 14.99,
+            "priceDisplay": "€14.99/quarter",
+            "prices": {
+              "quarterly": 14.99,
+              "yearly": 49.99,
+              "biennial": 89.99
+            },
+            "description": "Community discussions, PKM guidance & tutorials, curated content, resource library, templates, community support. **Free bonuses:** 3.8K+ concepts Knowledge Base, [Knowledge System Checklist](/product/knowledge-system-checklist), PKM Tools Database.",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/knowii-community?variant=explorer&frequency=quarterly"
+          },
+          {
+            "name": "Knowledge Builder",
+            "price": 59.99,
+            "priceDisplay": "€59.99/quarter",
+            "prices": {
+              "quarterly": 59.99,
+              "yearly": 199.99,
+              "biennial": 379.99
+            },
+            "description": "Everything from Explorer, plus: [Premium Workshops](/categories/workshops), [Obsidian Starter Kit](/product/obsidian-starter-kit) & [Course](/product/obsidian-starter-course), Expert Access, Monthly Challenges, Newsletter Archives, Early Access. **$150+ value included!**",
+            "includedProducts": [
+              "journaling-deep-dive",
+              "personal-organization-101",
+              "clarity-101",
+              "ai-master-prompt",
+              "model-context-protocol",
+              "obsidian-starter-kit",
+              "obsidian-starter-course"
+            ],
+            "url": "https://store.dsebastien.net/product/knowii-community?variant=knowledge-builder&frequency=quarterly"
+          },
+          {
+            "name": "Knowledge Master",
+            "price": 119.99,
+            "priceDisplay": "€119.99/quarter",
+            "prices": {
+              "quarterly": 119.99,
+              "yearly": 399.99,
+              "biennial": 699.99
+            },
+            "description": "Everything in Knowledge Builder, PLUS: Exclusive events (AMAs, group coaching, masterminds), **All Courses** ([KM for Beginners](/product/knowledge-management-for-beginners), [Obsidian Course](/product/obsidian-starter-course) + future), **All Tools** ([Knowledge Worker Kit](/product/knowledge-worker-kit), [Obsidian Starter Kit](/product/obsidian-starter-kit), [PKM Library](/product/pkm-library), [AI Ghostwriter Guide](/product/ai-ghostwriter-guide) + future), Implementation Support, Experimental Content. **~$500 value included!**",
+            "includedProducts": [
+              "knowledge-worker-kit",
+              "knowledge-management-for-beginners",
+              "ai-ghostwriter-guide",
+              "pkm-library"
+            ],
+            "url": "https://store.dsebastien.net/product/knowii-community?variant=knowledge-master&frequency=quarterly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "knowledge-worker-kit",
+      "name": "Knowledge Worker Kit",
+      "shortDescription": "Everything I Know About Being a Knowledge Worker, In One Place",
+      "tags": [
+        "knowledge-work",
+        "pkm",
+        "personal-knowledge-management",
+        "knowledge-management",
+        "personal-organization",
+        "community",
+        "productivity",
+        "career-development",
+        "ai",
+        "learning",
+        "routines",
+        "smart-goals",
+        "systems",
+        "time-management",
+        "values"
+      ],
+      "mainCategory": "knowledge-work",
+      "priceTier": "premium",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/knowledge-worker-kit",
+      "badge": "flagship",
+      "featured": true,
+      "bestseller": true,
+      "bestValue": true,
+      "priority": 95,
+      "image": "https://store.dsebastien.net/assets/images/products/knowledge-worker-kit/kwk-cover.webp",
+      "imageAlt": "Your personal shield against AI obsolescence - become a top 1% knowledge worker",
+      "pricing": {
+        "currency": "EUR",
+        "price": 249.99,
+        "priceDisplay": "€249.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "everything-knowledge-bundle",
+      "name": "Everything Knowledge Bundle",
+      "shortDescription": "Every Knowledge Product I've Made. One Price. Yours Forever.",
+      "tags": [
+        "bundle",
+        "pkm",
+        "knowledge-management",
+        "knowledge-work",
+        "lifetime-access"
+      ],
+      "mainCategory": "bundles",
+      "priceTier": "premium",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/everything-knowledge-bundle",
+      "badge": "flagship",
+      "featured": false,
+      "bestseller": true,
+      "bestValue": true,
+      "priority": 85,
+      "image": "https://store.dsebastien.net/assets/images/products/everything-knowledge-bundle/ekb-cover.webp",
+      "imageAlt": "Every tool, course, and workshop - lifetime access, save €289",
+      "pricing": {
+        "currency": "EUR",
+        "price": 399.99,
+        "priceDisplay": "€399.99 (Save €489)",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "obsidian-starter-kit",
+      "name": "Obsidian Starter Kit",
+      "shortDescription": "Stop Configuring. Start Thinking.",
+      "tags": [
+        "obsidian",
+        "pkm",
+        "productivity",
+        "templates",
+        "ai",
+        "ai-assistants",
+        "claude",
+        "llms",
+        "mcp",
+        "community",
+        "goals",
+        "interstitial-journaling",
+        "knowledge-management",
+        "lifetime-access",
+        "markdown",
+        "para-method",
+        "periodic-reviews",
+        "personal-knowledge-management",
+        "personal-organization",
+        "reference",
+        "routines",
+        "systems",
+        "zettelkasten"
+      ],
+      "mainCategory": "kits-and-templates",
+      "priceTier": "standard",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/obsidian-starter-kit",
+      "badge": "bestseller",
+      "featured": true,
+      "bestseller": true,
+      "bestValue": false,
+      "priority": 95,
+      "image": "https://store.dsebastien.net/assets/images/products/osk/osk-ai-terminal.webp",
+      "imageAlt": "AI agents and skills at work inside an Obsidian Starter Kit vault",
+      "pricing": {
+        "currency": "EUR",
+        "price": 199.99,
+        "priceDisplay": "€199.99-€249.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": [
+          {
+            "name": "Essentials",
+            "price": 199.99,
+            "priceDisplay": "€199.99",
+            "prices": null,
+            "description": "Vault + comprehensive user guide",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/obsidian-starter-kit?variant=essentials&frequency=quarterly"
+          },
+          {
+            "name": "Premium",
+            "price": 249.99,
+            "priceDisplay": "€249.99",
+            "prices": null,
+            "description": "Essentials + 2h20m Obsidian Starter Course video",
+            "includedProducts": [
+              "obsidian-starter-course"
+            ],
+            "url": "https://store.dsebastien.net/product/obsidian-starter-kit?variant=premium&frequency=quarterly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "knowii-voice-ai",
+      "name": "Knowii Voice AI",
+      "shortDescription": "You Think Faster Than You Type",
+      "tags": [
+        "voice-to-text",
+        "speech-recognition",
+        "ai",
+        "productivity",
+        "privacy",
+        "offline"
+      ],
+      "mainCategory": "ai-tools",
+      "priceTier": "standard",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/knowii-voice-ai",
+      "badge": "featured",
+      "featured": true,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 90,
+      "image": "https://store.dsebastien.net/assets/images/products/knowii-voice-ai/knowii-voice-ai-cover.webp",
+      "imageAlt": "You think faster than you type - speak 3.75x faster",
+      "pricing": {
+        "currency": "EUR",
+        "price": 49,
+        "priceDisplay": "€49",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "knowledge-management-for-beginners",
+      "name": "Knowledge Management for Beginners",
+      "shortDescription": "Stop Drowning in Information. Start Building Knowledge.",
+      "tags": [
+        "pkm",
+        "personal-knowledge-management",
+        "knowledge-management",
+        "courses",
+        "learning",
+        "routines",
+        "second-brain",
+        "obsidian",
+        "zettelkasten",
+        "para-method",
+        "journaling",
+        "note-taking",
+        "ai",
+        "templates",
+        "life-os"
+      ],
+      "mainCategory": "courses",
+      "priceTier": "standard",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/knowledge-management-for-beginners",
+      "badge": "featured",
+      "featured": true,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 90,
+      "image": "https://store.dsebastien.net/assets/images/products/knowledge-management-for-beginners/kmfb-lesson-player.webp",
+      "imageAlt": "Learn at your own pace with comprehensive video lessons",
+      "pricing": {
+        "currency": "EUR",
+        "price": 69.99,
+        "priceDisplay": "€69.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "ai-ghostwriter-guide",
+      "name": "Build Your AI Ghostwriter",
+      "shortDescription": "Stop Using AI Like a Newbie. Start Training It.",
+      "tags": [
+        "ai",
+        "writing",
+        "ghostwriting",
+        "content-creation",
+        "personal-brand",
+        "claude",
+        "chatgpt"
+      ],
+      "mainCategory": "guides",
+      "priceTier": "standard",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/ai-ghostwriter-guide",
+      "badge": "featured",
+      "featured": true,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 80,
+      "image": "https://store.dsebastien.net/assets/images/products/ai-ghostwriter-guide/ai-ghostwriter-guide-cover.webp",
+      "imageAlt": "AI Ghostwriter Guide - Train AI to write in your voice",
+      "pricing": {
+        "currency": "EUR",
+        "price": 49.99,
+        "priceDisplay": "€49.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "ai-master-prompt",
+      "name": "Knowii AI Master Prompt Workshop",
+      "shortDescription": "Stop Starting from Zero Every Time You Open ChatGPT or Claude",
+      "tags": [
+        "ai",
+        "llms",
+        "prompt-engineering",
+        "ai-assistants",
+        "ai-prompts",
+        "master-prompts",
+        "claude",
+        "chatgpt"
+      ],
+      "mainCategory": "workshops",
+      "priceTier": "budget",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/ai-master-prompt",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 80,
+      "image": "https://store.dsebastien.net/assets/images/products/ai-master-prompt/ai-master-prompt-cover.webp",
+      "imageAlt": "Transform AI from generic assistant to your personal expert",
+      "pricing": {
+        "currency": "EUR",
+        "price": 19.99,
+        "priceDisplay": "€19.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "clarity-101",
+      "name": "Knowii Clarity 101 Workshop",
+      "shortDescription": "Stop Drifting. Start Designing Your Life.",
+      "tags": [
+        "clarity",
+        "life-design",
+        "values",
+        "goals",
+        "ikigai",
+        "personal-manifesto",
+        "design-thinking",
+        "smart-goals"
+      ],
+      "mainCategory": "workshops",
+      "priceTier": "budget",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/clarity-101",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 80,
+      "image": "https://store.dsebastien.net/assets/images/products/clarity-101/clarity-cover.webp",
+      "imageAlt": "Find your direction and design your life with intention",
+      "pricing": {
+        "currency": "EUR",
+        "price": 19.99,
+        "priceDisplay": "€19.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "journaling-deep-dive",
+      "name": "Journaling Deep Dive Workshop",
+      "shortDescription": "Your Journal as a Life Operating System",
+      "tags": [
+        "journaling",
+        "interstitial-journaling",
+        "periodic-reviews",
+        "productivity",
+        "zen-productivity",
+        "personal-organization",
+        "habits",
+        "routines",
+        "mindfulness",
+        "knowledge-management",
+        "focus",
+        "clarity"
+      ],
+      "mainCategory": "workshops",
+      "priceTier": "budget",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/journaling-deep-dive",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 80,
+      "image": "https://store.dsebastien.net/assets/images/products/journaling-deep-dive/jdd-cover.webp",
+      "imageAlt": "Transform your journal from diary to personal operating system",
+      "pricing": {
+        "currency": "EUR",
+        "price": 29.99,
+        "priceDisplay": "€29.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "personal-organization-101",
+      "name": "Knowii Personal Organization 101",
+      "shortDescription": "Stop Drowning in Tasks. Start Living with Intention.",
+      "tags": [
+        "personal-organization",
+        "productivity",
+        "time-management",
+        "clarity",
+        "focus",
+        "habits",
+        "routines",
+        "gtd"
+      ],
+      "mainCategory": "workshops",
+      "priceTier": "budget",
+      "targetExperienceLevel": "beginner",
+      "href": "https://store.dsebastien.net/product/personal-organization-101",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 80,
+      "image": "https://store.dsebastien.net/assets/images/products/personal-organization-101/po101-cover.webp",
+      "imageAlt": "Stop drowning in tasks - start living with intention",
+      "pricing": {
+        "currency": "EUR",
+        "price": 19.99,
+        "priceDisplay": "€19.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "model-context-protocol",
+      "name": "Knowii Model Context Protocol (MCP) Masterclass",
+      "shortDescription": "Connect AI Directly to Your Data and Tools",
+      "tags": [
+        "mcp",
+        "model-context-protocol",
+        "ai",
+        "llms",
+        "claude",
+        "obsidian",
+        "automation"
+      ],
+      "mainCategory": "workshops",
+      "priceTier": "budget",
+      "targetExperienceLevel": "intermediate",
+      "href": "https://store.dsebastien.net/product/model-context-protocol",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 75,
+      "image": "https://store.dsebastien.net/assets/images/products/model-context-protocol/model-context-protocol-cover.webp",
+      "imageAlt": "MCP Masterclass - Give AI superpowers to access any data source",
+      "pricing": {
+        "currency": "EUR",
+        "price": 19.99,
+        "priceDisplay": "€19.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "obsidian-starter-course",
+      "name": "Obsidian Starter Course",
+      "shortDescription": "Master Obsidian in One Weekend",
+      "tags": [
+        "obsidian",
+        "personal-knowledge-management",
+        "knowledge-management",
+        "pkm",
+        "note-taking",
+        "zettelkasten",
+        "para-method",
+        "johnny-decimal",
+        "markdown",
+        "journaling",
+        "routines",
+        "templates"
+      ],
+      "mainCategory": "courses",
+      "priceTier": "standard",
+      "targetExperienceLevel": "beginner",
+      "href": "https://store.dsebastien.net/product/obsidian-starter-course",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 70,
+      "image": "https://store.dsebastien.net/assets/images/products/obsidian-starter-course/osc-cover.webp",
+      "imageAlt": "From Obsidian newbie to hero in 2h20 - skip months of trial and error",
+      "pricing": {
+        "currency": "EUR",
+        "price": 69.99,
+        "priceDisplay": "$69.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "pkm-coaching",
+      "name": "Personal Knowledge Management Coaching",
+      "shortDescription": "One Hour That Saves You Months of Experimentation",
+      "tags": [
+        "pkm",
+        "coaching",
+        "knowledge-management"
+      ],
+      "mainCategory": "coaching",
+      "priceTier": "premium",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/pkm-coaching",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 65,
+      "image": "https://store.dsebastien.net/assets/images/products/pkm-coaching/pkm-coaching-cover.webp",
+      "imageAlt": "1-on-1 expert guidance to transform your knowledge system",
+      "pricing": {
+        "currency": "EUR",
+        "price": 99.99,
+        "priceDisplay": "€99.99 per session",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "dev-concepts-starter-bundle",
+      "name": "Dev Concepts Starter Bundle",
+      "shortDescription": "The two skills every junior developer needs (but nobody teaches)",
+      "tags": [
+        "learning",
+        "career-development",
+        "programming",
+        "it-fundamentals",
+        "concepts",
+        "beginners",
+        "bundle"
+      ],
+      "mainCategory": "bundles",
+      "priceTier": "budget",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/dev-concepts-starter-bundle",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 60,
+      "image": "https://store.dsebastien.net/assets/images/products/dev-concepts-starter-bundle/dev-concepts-starter-bundle-cover.webp",
+      "imageAlt": "Master software fundamentals with 2 volumes and lifetime community access",
+      "pricing": {
+        "currency": "EUR",
+        "price": 14.99,
+        "priceDisplay": "€14.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": [
+          {
+            "name": "The e-books",
+            "price": 14.99,
+            "priceDisplay": "€14.99",
+            "prices": null,
+            "description": "One copy of the e-books",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/dev-concepts-starter-bundle?variant=the-e-books&frequency=quarterly"
+          },
+          {
+            "name": "The e-books + 1 hour of coaching",
+            "price": 93.99,
+            "priceDisplay": "€93.99",
+            "prices": null,
+            "description": "One copy of the e-books + 1 hour of personalized coaching",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/dev-concepts-starter-bundle?variant=the-e-books-1-hour-of-coaching&frequency=quarterly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pkm-library",
+      "name": "PKM Library: 2,000+ Curated PKM Resources",
+      "shortDescription": "Skip Years of Knowledge Management Research. Start With **2,000+** Curated Resources.",
+      "tags": [
+        "pkm",
+        "knowledge-management",
+        "resources",
+        "directories",
+        "tools",
+        "curated",
+        "second-brain",
+        "zettelkasten"
+      ],
+      "mainCategory": "knowledge-bases",
+      "priceTier": "budget",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/pkm-library",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 60,
+      "image": "https://store.dsebastien.net/assets/images/products/pkm-library/pkm-library-cover.webp",
+      "imageAlt": "2,000+ curated PKM resources - skip years of research",
+      "pricing": {
+        "currency": "EUR",
+        "price": 39.99,
+        "priceDisplay": "€39.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": [
+          {
+            "name": "The Library",
+            "price": 39.99,
+            "priceDisplay": "€39.99",
+            "prices": null,
+            "description": "Access to the Personal Knowledge Management Notion space",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/pkm-library?variant=the-library&frequency=quarterly"
+          },
+          {
+            "name": "Commercial License",
+            "price": 139.99,
+            "priceDisplay": "€139.99",
+            "prices": null,
+            "description": "Required if you buy the PKM Library for your business",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/pkm-library?variant=commercial-license&frequency=quarterly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dev-concepts-volume-01",
+      "name": "Dev Concepts Volume 1 - Software Craft",
+      "shortDescription": "The mindset that separates software craftspeople from coders",
+      "tags": [
+        "learning",
+        "career-development",
+        "programming",
+        "it-fundamentals",
+        "concepts",
+        "beginners"
+      ],
+      "mainCategory": "dev-and-it",
+      "priceTier": "budget",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/dev-concepts-volume-01",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 55,
+      "image": "https://store.dsebastien.net/assets/images/products/dev-concepts-volume-01/dev-concepts-volume-01-cover.webp",
+      "imageAlt": "Your journey to become a software crafter starts here",
+      "pricing": {
+        "currency": "EUR",
+        "price": 9.99,
+        "priceDisplay": "€9.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": [
+          {
+            "name": "E-book Only",
+            "price": 9.99,
+            "priceDisplay": "€9.99",
+            "prices": null,
+            "description": "100-page digital e-book with lifetime access and updates",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/dev-concepts-volume-01?variant=e-book-only&frequency=quarterly"
+          },
+          {
+            "name": "E-book + 1-Hour Coaching",
+            "price": 88.99,
+            "priceDisplay": "€88.99",
+            "prices": null,
+            "description": "E-book plus personalized one-on-one coaching session with Sébastien Dubois",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/dev-concepts-volume-01?variant=e-book-1-hour-coaching&frequency=quarterly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dev-concepts-volume-02",
+      "name": "Dev Concepts Volume 2 - What Clients Need",
+      "shortDescription": "Stop building features nobody uses",
+      "tags": [
+        "learning",
+        "career-development",
+        "programming",
+        "concepts",
+        "beginners",
+        "design-thinking"
+      ],
+      "mainCategory": "dev-and-it",
+      "priceTier": "budget",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/dev-concepts-volume-02",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 55,
+      "image": "https://store.dsebastien.net/assets/images/products/dev-concepts-volume-02/dev-concepts-volume-02-cover.webp",
+      "imageAlt": "Build products your clients will love",
+      "pricing": {
+        "currency": "EUR",
+        "price": 9.99,
+        "priceDisplay": "€9.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": [
+          {
+            "name": "E-book Only",
+            "price": 9.99,
+            "priceDisplay": "€9.99",
+            "prices": null,
+            "description": "50-page digital e-book with lifetime access and updates",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/dev-concepts-volume-02?variant=e-book-only&frequency=quarterly"
+          },
+          {
+            "name": "E-book + 1-Hour Coaching",
+            "price": 88.99,
+            "priceDisplay": "€88.99",
+            "prices": null,
+            "description": "E-book plus personalized one-on-one coaching session with Sébastien Dubois",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/dev-concepts-volume-02?variant=e-book-1-hour-coaching&frequency=quarterly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "beginners-guide-obsidian",
+      "name": "Beginner's Guide to Mastering Obsidian",
+      "shortDescription": "From Confused Beginner to Confident Obsidian Note-Taker",
+      "tags": [
+        "obsidian",
+        "free-guide",
+        "lead-magnet",
+        "beginners",
+        "note-taking",
+        "pkm",
+        "personal-knowledge-management",
+        "knowledge-management",
+        "getting-started"
+      ],
+      "mainCategory": "free",
+      "priceTier": "free",
+      "targetExperienceLevel": "beginner",
+      "href": "https://store.dsebastien.net/product/beginners-guide-obsidian",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 40,
+      "image": "https://store.dsebastien.net/assets/images/products/beginners-guide-obsidian/beginners-guide-obsidian-cover.webp",
+      "imageAlt": "Start your Obsidian journey with confidence - free step-by-step guide",
+      "pricing": {
+        "currency": "EUR",
+        "price": 0,
+        "priceDisplay": "FREE",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "knowledge-system-checklist",
+      "name": "Knowledge Management System Checklist",
+      "shortDescription": "Stop Guessing. Start Building.",
+      "tags": [
+        "pkm",
+        "personal-knowledge-management",
+        "knowledge-management",
+        "checklist",
+        "free-resource",
+        "lead-magnet",
+        "systems"
+      ],
+      "mainCategory": "free",
+      "priceTier": "free",
+      "targetExperienceLevel": "beginner",
+      "href": "https://store.dsebastien.net/product/knowledge-system-checklist",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 40,
+      "image": "https://store.dsebastien.net/assets/images/products/knowledge-system-checklist/knowledge-system-checklist-cover.webp",
+      "imageAlt": "Free checklist to build your knowledge system with confidence",
+      "pricing": {
+        "currency": "EUR",
+        "price": 0,
+        "priceDisplay": "FREE",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": null
+      }
+    },
+    {
+      "id": "it-concepts-wall",
+      "name": "IT Concepts Wall",
+      "shortDescription": "My Personal IT Research Collection",
+      "tags": [
+        "it-fundamentals",
+        "programming",
+        "concepts",
+        "reference"
+      ],
+      "mainCategory": "dev-and-it",
+      "priceTier": "budget",
+      "targetExperienceLevel": "all-levels",
+      "href": "https://store.dsebastien.net/product/it-concepts-wall",
+      "badge": null,
+      "featured": false,
+      "bestseller": false,
+      "bestValue": false,
+      "priority": 35,
+      "image": "https://store.dsebastien.net/assets/images/products/it-concepts-wall/it-concepts-wall-cover.webp",
+      "imageAlt": "Essential IT concepts at your fingertips - stop wasting hours searching",
+      "pricing": {
+        "currency": "EUR",
+        "price": 9.99,
+        "priceDisplay": "€9.99",
+        "isSubscription": false,
+        "defaultPaymentFrequency": null,
+        "variants": [
+          {
+            "name": "The Board",
+            "price": 9.99,
+            "priceDisplay": "€9.99",
+            "prices": null,
+            "description": "Access to the IT Concepts Wall",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/it-concepts-wall?variant=the-board&frequency=quarterly"
+          },
+          {
+            "name": "The Board + 1 Hour of Coaching",
+            "price": 88.99,
+            "priceDisplay": "€88.99",
+            "prices": null,
+            "description": "Access to the IT Concepts Wall + 1 hour of personalized coaching",
+            "includedProducts": null,
+            "url": "https://store.dsebastien.net/product/it-concepts-wall?variant=the-board-1-hour-of-coaching&frequency=quarterly"
+          }
+        ]
+      }
+    }
+  ]
+}

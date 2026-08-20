@@ -672,16 +672,41 @@ function generateHtml(stats, ctaProducts, outputFilePath) {
 const CTA_SOURCE = "https://www.store.dsebastien.net/products-light.json";
 const CTA_PRODUCT_IDS = ["obsidian-starter-kit", "knowii-community"];
 
+const CTA_CACHE = path.join(__dirname, "products-cache.json");
+
+function pickCtaProducts(data) {
+  const items = Array.isArray(data) ? data : data.products || [];
+  return CTA_PRODUCT_IDS.map((id) => items.find((p) => p && p.id === id)).filter(Boolean);
+}
+
 async function fetchCtaProducts() {
   try {
-    const res = await fetch(CTA_SOURCE, { signal: AbortSignal.timeout(8000) });
+    const res = await fetch(CTA_SOURCE, {
+      signal: AbortSignal.timeout(8000),
+      headers: {
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
+        "Accept": "application/json",
+      },
+    });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-    const items = Array.isArray(data) ? data : data.products || [];
-    return CTA_PRODUCT_IDS.map((id) => items.find((p) => p && p.id === id)).filter(Boolean);
+    const picks = pickCtaProducts(data);
+    if (picks.length) {
+      // Refresh the committed snapshot so CI builds keep working when the
+      // store's bot protection blocks the Actions runner.
+      fs.writeFileSync(CTA_CACHE, JSON.stringify(data, null, 2));
+      return picks;
+    }
+    throw new Error("no matching products in live catalog");
   } catch (e) {
-    console.warn("Store catalog unavailable, building without CTA cards:", e.message);
-    return [];
+    console.warn("Live store catalog unavailable, falling back to snapshot:", e.message);
+    try {
+      const cached = JSON.parse(fs.readFileSync(CTA_CACHE, "utf-8"));
+      return pickCtaProducts(cached);
+    } catch (e2) {
+      console.warn("No catalog snapshot either, building without CTA cards:", e2.message);
+      return [];
+    }
   }
 }
 
