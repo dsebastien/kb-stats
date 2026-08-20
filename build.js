@@ -191,21 +191,28 @@ function generateHtml(stats, outputFilePath) {
     }
     html { color-scheme: dark; scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--text); font-family: "Noto Sans", "Inter", "Segoe UI", system-ui, sans-serif; }
-    .font-mono, .stat-number { font-family: "JetBrains Mono", "Fira Code", monospace; }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 0.75rem; transition: transform .25s ease, border-color .25s ease; }
-    .card:hover { transform: translateY(-2px); border-color: rgba(255, 20, 147, 0.4); }
-    .chart-well { background: var(--well); border-radius: 0.5rem; padding: 1rem; }
-    .stat-number { font-size: 2rem; font-weight: 600; color: var(--text); }
+    .font-mono { font-family: "JetBrains Mono", "Fira Code", monospace; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 1rem; transition: transform .25s ease, box-shadow .25s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25); }
+    .chart-well { background: var(--well); border-radius: 0.75rem; padding: 1rem; }
+    .stat-number { font-size: 2.25rem; font-weight: 700; color: var(--text); line-height: 1.1; }
     .stat-accent { color: var(--accent-text); }
-    .section-title { font-size: 1.5rem; font-weight: 800; }
-    .section-title .hash { color: var(--accent-text); }
-    .hero-glow { background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(229, 0, 125, 0.28), transparent 70%), radial-gradient(ellipse 40% 30% at 85% 15%, rgba(79, 148, 212, 0.15), transparent 70%); }
-    .chip { background: rgba(255, 20, 147, 0.1); border: 1px solid rgba(255, 20, 147, 0.35); border-radius: 9999px; transition: border-color .2s; }
-    .chip:hover { border-color: var(--accent-text); }
-    .btn-primary { background: var(--accent); color: #fff; font-weight: 700; border-radius: 0.5rem; padding: 0.75rem 1.5rem; display: inline-block; transition: filter .2s, transform .2s; }
-    .btn-primary:hover { filter: brightness(1.15); transform: translateY(-1px); text-decoration: none; }
-    .btn-secondary { border: 1px solid var(--accent-text); color: var(--accent-text); font-weight: 700; border-radius: 0.5rem; padding: 0.75rem 1.5rem; display: inline-block; transition: background .2s; }
-    .btn-secondary:hover { background: rgba(255, 20, 147, 0.1); text-decoration: none; }
+    .section-title { font-size: 1.75rem; font-weight: 800; }
+    .section-title::after { content: ""; display: block; width: 3rem; height: 0.25rem; border-radius: 9999px; background: var(--accent); margin-top: 0.5rem; }
+    .hero-gradient { background: linear-gradient(to bottom right, rgba(229, 0, 125, 0.12), rgba(168, 85, 247, 0.12), var(--bg)); position: relative; overflow: hidden; }
+    .hero-headline-accent { background: linear-gradient(90deg, #ff1493, #e5007d 50%, #a855f7); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 18px rgba(255, 20, 147, 0.35)); }
+    .pill { display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 9999px; border: 1px solid rgba(229, 0, 125, 0.35); background: rgba(229, 0, 125, 0.12); padding: 0.25rem 1rem; font-size: 0.875rem; font-weight: 600; }
+    .chip { background: rgba(255, 255, 255, 0.08); border-radius: 0.5rem; font-weight: 500; transition: background .2s; }
+    .chip:hover { background: rgba(255, 255, 255, 0.14); }
+    .btn-primary { background: var(--accent); color: #fff; font-weight: 700; border-radius: 0.5rem; padding: 0.75rem 1.75rem; display: inline-block; box-shadow: 0 4px 14px rgba(229, 0, 125, 0.35); transition: filter .2s, transform .2s; }
+    .btn-primary:hover { filter: brightness(1.12); transform: translateY(-1px); text-decoration: none; }
+    .btn-secondary { background: rgba(255, 255, 255, 0.1); color: var(--text); font-weight: 700; border-radius: 0.5rem; padding: 0.75rem 1.75rem; display: inline-block; transition: background .2s; }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.16); text-decoration: none; }
+    .particle { position: absolute; border-radius: 9999px; background: var(--accent-text); opacity: 0.5; animation: float 5s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); opacity: 0.35; } 50% { transform: translateY(-14px); opacity: 0.7; } }
+    #backToTop { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 3.25rem; height: 3.25rem; border-radius: 9999px; background: var(--accent); color: #fff; font-size: 1.4rem; font-weight: 700; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(229, 0, 125, 0.4); opacity: 0; pointer-events: none; transition: opacity .3s, transform .2s; z-index: 50; }
+    #backToTop.show { opacity: 1; pointer-events: auto; }
+    #backToTop:hover { transform: translateY(-2px); }
     .heat-col { display: flex; flex-direction: column; gap: 3px; }
     .heat-cell { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
     .heat-months { display: grid; grid-auto-flow: column; font-size: 0.7rem; color: var(--muted); margin-bottom: 4px; }
@@ -224,21 +231,39 @@ function generateHtml(stats, outputFilePath) {
 </head>
 <body>
   <!-- Hero -->
-  <header class="hero-glow border-b" style="border-color:var(--border)">
-    <div class="max-w-6xl mx-auto px-4 pt-16 pb-12 text-center">
-      <p class="text-sm font-semibold uppercase tracking-[0.25em]" style="color:var(--accent-text)">DeveloPassion</p>
-      <h1 class="text-4xl md:text-5xl font-extrabold mt-3">Knowledge Base Statistics</h1>
-      <p class="mt-4 max-w-2xl mx-auto" style="color:var(--muted)">
+  <header class="hero-gradient border-b" style="border-color:var(--border)">
+    <div class="particle" style="width:8px;height:8px;left:12%;top:22%"></div>
+    <div class="particle" style="width:5px;height:5px;left:28%;top:12%;animation-delay:1.2s"></div>
+    <div class="particle" style="width:6px;height:6px;left:64%;top:15%;animation-delay:.6s"></div>
+    <div class="particle" style="width:9px;height:9px;left:81%;top:30%;animation-delay:1.8s"></div>
+    <div class="particle" style="width:4px;height:4px;left:48%;top:8%;animation-delay:2.4s"></div>
+    <div class="particle" style="width:5px;height:5px;left:91%;top:12%;animation-delay:.3s"></div>
+    <div class="max-w-6xl mx-auto px-4 pt-14 pb-14 text-center relative">
+      <span class="pill" style="color:var(--accent-text)">📊 Live vault metrics · by Sébastien Dubois</span>
+      <h1 class="text-4xl md:text-6xl font-extrabold mt-5">Knowledge Base <span class="hero-headline-accent">Statistics</span></h1>
+      <p class="mt-5 text-lg max-w-2xl mx-auto" style="color:var(--muted)">
         A living window into <a href="https://notes.dsebastien.net">notes.dsebastien.net</a> —
         Sébastien Dubois' public Obsidian vault. ${vaultYears} years of daily knowledge work, measured.
       </p>
-      <p class="mt-2 text-xs font-mono" style="color:var(--muted)">${stats.generated_at ? `Generated ${stats.generated_at} · updates automatically` : ""}</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
-        ${statCard("Notes", "0", "and growing daily", { countup: o.total_notes, accent: true })}
-        ${statCard("Words", "0", `≈ ${o.books_equivalent.toFixed(0)} books`, { countup: o.total_words, accent: true })}
-        ${statCard("Internal links", "0", `${o.links.internal.average} per note`, { countup: o.links.internal.count, accent: true })}
-        ${statCard("Day streak", "0", `longest: ${fmt(streak.longest)} days`, { countup: streak.current, accent: true })}
+      <div class="flex flex-wrap justify-center gap-x-12 gap-y-6 mt-10">
+        <div class="text-center">
+          <p class="text-4xl font-bold" style="color:var(--accent-text)" data-countup="${o.total_notes}">0</p>
+          <p class="text-sm mt-1" style="color:var(--muted)">Notes</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold" style="color:#4ade80" data-countup="${o.total_words}">0</p>
+          <p class="text-sm mt-1" style="color:var(--muted)">Words · ≈ ${o.books_equivalent.toFixed(0)} books</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold" style="color:#fbbf24" data-countup="${o.links.internal.count}">0</p>
+          <p class="text-sm mt-1" style="color:var(--muted)">Internal links</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold" data-countup="${streak.current}">0</p>
+          <p class="text-sm mt-1" style="color:var(--muted)">Day streak · longest ${fmt(streak.longest)}</p>
+        </div>
       </div>
+      <p class="mt-8 text-xs font-mono" style="color:var(--muted)">${stats.generated_at ? `Generated ${stats.generated_at} · updates automatically` : ""}</p>
     </div>
   </header>
 
@@ -256,7 +281,7 @@ function generateHtml(stats, outputFilePath) {
 
     <!-- Growth -->
     <section class="mt-14">
-      <h2 class="section-title reveal"><span class="hash">#</span> Growth over time</h2>
+      <h2 class="section-title reveal">Growth over time</h2>
       <div class="grid lg:grid-cols-2 gap-6 mt-6">
         <div class="card p-6 reveal">
           <h3 class="font-bold">Cumulative notes</h3>
@@ -275,7 +300,7 @@ function generateHtml(stats, outputFilePath) {
 
     <!-- Activity heatmap -->
     <section class="mt-14">
-      <h2 class="section-title reveal"><span class="hash">#</span> Creation activity — last 12 months</h2>
+      <h2 class="section-title reveal">Creation activity — last 12 months</h2>
       <div class="card p-6 mt-6 reveal">
         <div class="chart-well">
         ${buildHeatmap(activity.created_by_day)}
@@ -286,7 +311,7 @@ function generateHtml(stats, outputFilePath) {
     ${ratio ? `
     <!-- Public vs private -->
     <section class="mt-14">
-      <h2 class="section-title reveal"><span class="hash">#</span> Public by default</h2>
+      <h2 class="section-title reveal">Public by default</h2>
       <div class="card p-6 mt-6 reveal">
         <div class="flex flex-col md:flex-row md:items-center gap-6">
           <div class="text-center md:text-left shrink-0">
@@ -310,7 +335,7 @@ function generateHtml(stats, outputFilePath) {
 
     <!-- What's inside -->
     <section class="mt-14">
-      <h2 class="section-title reveal"><span class="hash">#</span> What's inside</h2>
+      <h2 class="section-title reveal">What's inside</h2>
       <div class="grid lg:grid-cols-2 gap-6 mt-6">
         <div class="card p-6 reveal">
           <h3 class="font-bold mb-4">Notes by type <span class="text-sm font-normal" style="color:var(--muted)">(top 12)</span></h3>
@@ -341,7 +366,7 @@ function generateHtml(stats, outputFilePath) {
 
     <!-- AI assistant -->
     <section class="mt-14">
-      <h2 class="section-title reveal"><span class="hash">#</span> The AI layer</h2>
+      <h2 class="section-title reveal">The AI layer</h2>
       <p class="mt-2 text-sm max-w-2xl reveal" style="color:var(--muted)">This vault is not just written — it is tended. A living AI team of agents and skills maintains, connects, and grows the knowledge base every day.</p>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
         ${statCard("AI skills", "0", "specialized capabilities", { countup: ai.skills, accent: true })}
@@ -352,7 +377,7 @@ function generateHtml(stats, outputFilePath) {
 
     <!-- Rhythms -->
     <section class="mt-14">
-      <h2 class="section-title reveal"><span class="hash">#</span> Rhythms</h2>
+      <h2 class="section-title reveal">Rhythms</h2>
       <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-6">
         ${PERIOD_ORDER.filter((k) => o.periodic_notes[k]).map((k) => {
           const d = o.periodic_notes[k];
@@ -371,7 +396,7 @@ function generateHtml(stats, outputFilePath) {
 
     <!-- Folders -->
     <section class="mt-14">
-      <h2 class="section-title reveal"><span class="hash">#</span> Biggest knowledge areas</h2>
+      <h2 class="section-title reveal">Biggest knowledge areas</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
         ${Object.entries(o.folders.top_folders).map(([folder, d]) => `
           <div class="card p-5 reveal">
@@ -388,7 +413,7 @@ function generateHtml(stats, outputFilePath) {
 
     <!-- Engine room -->
     <section class="mt-14">
-      <h2 class="section-title reveal"><span class="hash">#</span> Engine room</h2>
+      <h2 class="section-title reveal">Engine room</h2>
       <div class="grid lg:grid-cols-2 gap-6 mt-6">
         <div class="card p-6 reveal">
           <h3 class="font-bold">Git commits per month</h3>
@@ -408,7 +433,7 @@ function generateHtml(stats, outputFilePath) {
 
     <!-- Freshness -->
     <section class="mt-14">
-      <h2 class="section-title reveal"><span class="hash">#</span> Freshness</h2>
+      <h2 class="section-title reveal">Freshness</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
         ${["last_week", "last_month", "last_quarter", "last_year"].map((k) => {
           const d = o.content_age.updates[k];
@@ -442,6 +467,8 @@ function generateHtml(stats, outputFilePath) {
       <p class="mt-3">Crafted by <a href="https://www.dsebastien.net">Sébastien Dubois</a> / DeveloPassion.</p>
     </div>
   </footer>
+
+  <button id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
   <script>
     var DATA = ${JSON.stringify(chartData)};
@@ -548,6 +575,12 @@ function generateHtml(stats, outputFilePath) {
       });
     }, { threshold: 0.4 });
     document.querySelectorAll("[data-countup]").forEach(function (el) { countObserver.observe(el); });
+
+    // Back-to-top FAB
+    var fab = document.getElementById("backToTop");
+    window.addEventListener("scroll", function () {
+      fab.classList.toggle("show", window.scrollY > 600);
+    }, { passive: true });
   </script>
 </body>
 </html>
