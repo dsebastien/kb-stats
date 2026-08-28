@@ -108,11 +108,11 @@ function buildHeatmap(createdByDay) {
           <div class="heat-days">${dayLabel("Mon")}${dayLabel("")}${dayLabel("Wed")}${dayLabel("")}${dayLabel("Fri")}${dayLabel("")}${dayLabel("")}</div>
           ${columns.join("")}
         </div>
-        <div class="flex items-center justify-between mt-4 text-xs" style="color:var(--muted)">
-          <span><strong style="color:var(--text)">${fmt(total)}</strong> notes created in the last 12 months${busiestDate ? ` · busiest day: <strong style="color:var(--accent-text)">${busiestDate}</strong> (${busiest.count} notes)` : ""}</span>
-          <span class="flex items-center gap-1">Less ${legend} More</span>
-        </div>
       </div>
+    </div>
+    <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 mt-4 text-xs" style="color:var(--muted)">
+      <span><strong style="color:var(--text)">${fmt(total)}</strong> notes created in the last 12 months${busiestDate ? ` · busiest day: <strong style="color:var(--accent-text)">${busiestDate}</strong> (${busiest.count} notes)` : ""}</span>
+      <span class="flex items-center gap-1 whitespace-nowrap">Less ${legend} More</span>
     </div>`;
 }
 
@@ -133,12 +133,12 @@ function statCard(label, value, subtext, opts = {}) {
 function barRow(label, count, max, hue) {
   const pct = Math.max(1.5, (count / max) * 100);
   return `
-    <div class="flex items-center gap-3 group">
-      <span class="w-44 shrink-0 text-sm text-right truncate" style="color:var(--text)">${label}</span>
-      <div class="flex-1 h-5 rounded-r overflow-hidden" style="background:rgba(0,0,0,0.25)">
+    <div class="flex items-center gap-2 sm:gap-3 group">
+      <span class="w-24 sm:w-44 shrink-0 text-xs sm:text-sm text-right truncate" style="color:var(--text)">${label}</span>
+      <div class="flex-1 min-w-0 h-5 rounded-r overflow-hidden" style="background:rgba(0,0,0,0.25)">
         <div class="h-full rounded-r bar-fill" style="width:${pct}%;background:${hue}"></div>
       </div>
-      <span class="w-16 shrink-0 text-sm font-mono" style="color:var(--muted)">${fmt(count)}</span>
+      <span class="w-12 sm:w-16 shrink-0 text-xs sm:text-sm font-mono" style="color:var(--muted)">${fmt(count)}</span>
     </div>`;
 }
 
@@ -246,19 +246,23 @@ function generateHtml(stats, ctaProducts, outputFilePath) {
       --series-green: #2e9e6b;
     }
     html { color-scheme: dark; scroll-behavior: smooth; }
+    html, body { overflow-x: clip; }
     body { background: var(--bg); color: var(--text); font-family: "Noto Sans", "Inter", "Segoe UI", system-ui, sans-serif; }
+    /* Grid/flex children default to min-width:auto, which lets wide content (canvases, long text) blow past the viewport */
+    .grid > *, .flex-1 { min-width: 0; }
     .font-mono { font-family: "JetBrains Mono", "Fira Code", monospace; }
     .card { background: var(--surface); border: 1px solid var(--border); border-radius: 1rem; transition: transform .25s ease, box-shadow .25s ease; }
     .card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25); }
-    .chart-well { background: var(--well); border-radius: 0.75rem; padding: 1rem; }
-    .stat-number { font-size: 2.25rem; font-weight: 700; color: var(--text); line-height: 1.1; }
+    .chart-well { background: var(--well); border-radius: 0.75rem; padding: 1rem; min-width: 0; }
+    .chart-well canvas { max-width: 100%; }
+    .stat-number { font-size: clamp(1.5rem, 5.5vw, 2.25rem); font-weight: 700; color: var(--text); line-height: 1.1; overflow-wrap: anywhere; }
     .stat-accent { color: var(--accent-text); }
     .section-title { font-size: 1.75rem; font-weight: 800; }
     .section-title::after { content: ""; display: block; width: 3rem; height: 0.25rem; border-radius: 9999px; background: var(--accent); margin-top: 0.5rem; }
     .hero-gradient { background: linear-gradient(to bottom right, rgba(229, 0, 125, 0.12), rgba(168, 85, 247, 0.12), var(--bg)); position: relative; overflow: hidden; }
     .hero-headline-accent { background: linear-gradient(90deg, #ff1493, #e5007d 50%, #a855f7); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 18px rgba(255, 20, 147, 0.35)); }
     .pill { display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 9999px; border: 1px solid rgba(229, 0, 125, 0.35); background: rgba(229, 0, 125, 0.12); padding: 0.25rem 1rem; font-size: 0.875rem; font-weight: 600; }
-    .chip { background: rgba(255, 255, 255, 0.08); border-radius: 0.5rem; font-weight: 500; transition: background .2s; }
+    .chip { background: rgba(255, 255, 255, 0.08); border-radius: 0.5rem; font-weight: 500; transition: background .2s; max-width: 100%; overflow-wrap: anywhere; }
     .chip:hover { background: rgba(255, 255, 255, 0.14); }
     .btn-primary { background: var(--accent); color: #fff; font-weight: 700; border-radius: 0.5rem; padding: 0.75rem 1.75rem; display: inline-block; box-shadow: 0 4px 14px rgba(229, 0, 125, 0.35); transition: filter .2s, transform .2s; }
     .btn-primary:hover { filter: brightness(1.12); transform: translateY(-1px); text-decoration: none; }
@@ -287,6 +291,7 @@ function generateHtml(stats, ctaProducts, outputFilePath) {
     .heat-daylabel { height: var(--heat-cell); font-size: 10px; line-height: var(--heat-cell); color: var(--muted); text-align: right; width: 26px; }
     .heat-months { display: grid; grid-auto-flow: column; font-size: 0.7rem; color: var(--muted); margin-bottom: 6px; margin-left: 32px; }
     @media (max-width: 900px) { :root { --heat-cell: 10px; } }
+    @media (max-width: 480px) { :root { --heat-cell: 8px; --heat-gap: 2px; } .heat-daylabel { font-size: 8px; } }
     .bar-fill { transform-origin: left; animation: growbar 1s ease both; }
     @keyframes growbar { from { transform: scaleX(0); } }
     .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
@@ -393,7 +398,7 @@ function generateHtml(stats, ctaProducts, outputFilePath) {
               <div style="width:${ratio.percentage}%;background:var(--accent)"></div>
               <div class="flex-1" style="background:rgba(255,255,255,0.2)"></div>
             </div>
-            <div class="flex justify-between text-sm mt-2" style="color:var(--muted)">
+            <div class="flex flex-wrap justify-between gap-x-4 gap-y-1 text-sm mt-2" style="color:var(--muted)">
               <span><span class="inline-block w-2.5 h-2.5 rounded-sm mr-1.5" style="background:var(--accent)"></span>${fmt(ratio.public)} public notes</span>
               <span>${fmt(ratio.private)} private notes <span class="inline-block w-2.5 h-2.5 rounded-sm ml-1.5" style="background:rgba(255,255,255,0.2)"></span></span>
             </div>
