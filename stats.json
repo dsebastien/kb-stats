@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-09-13 10:36:36",
+  "generated_at": "2026-09-14 08:45:46",
   "overall": {
     "total_notes": 18115,
-    "total_words": 10762089,
+    "total_words": 10761337,
     "reading_time": {
-      "minutes": 43048.356,
-      "formatted": "717 hours, 28 minutes"
+      "minutes": 43045.348,
+      "formatted": "717 hours, 25 minutes"
     },
-    "books_equivalent": 119.57876666666667,
+    "books_equivalent": 119.57041111111111,
     "content_age": {
       "average_days": {
         "days": 368,
         "formatted": "1 year, 8 days"
       },
       "oldest_note": {
-        "days": 1615,
-        "formatted": "4 years, 5 months, 25 days",
+        "days": 1616,
+        "formatted": "4 years, 5 months, 26 days",
         "date": "2022-04-12"
       },
       "newest_note": {
@@ -25,12 +25,12 @@
       },
       "updates": {
         "last_week": {
-          "count": 2197,
+          "count": 2198,
           "percentage": "12.1"
         },
         "last_month": {
-          "count": 3216,
-          "percentage": "17.8"
+          "count": 3210,
+          "percentage": "17.7"
         },
         "last_quarter": {
           "count": 9156,
@@ -48,11 +48,11 @@
     },
     "links": {
       "internal": {
-        "count": 176489,
+        "count": 176493,
         "average": "9.7"
       },
       "external": {
-        "count": 33356,
+        "count": 33350,
         "average": "1.8"
       }
     },
@@ -245,16 +245,16 @@
     "periodic_notes": {
       "daily": {
         "count": 1790,
-        "words": 614609,
+        "words": 614739,
         "average_words": 343,
-        "internal_links": 27341,
-        "average_internal_links": 15.274301675977654,
-        "books": 6.8289888888888886,
-        "reading_minutes": 2458.436,
-        "reading_hours": 40.973933333333335,
+        "internal_links": 27351,
+        "average_internal_links": 15.279888268156425,
+        "books": 6.830433333333334,
+        "reading_minutes": 2458.956,
+        "reading_hours": 40.982600000000005,
         "reading_time": {
-          "minutes": 2458.436,
-          "formatted": "40 hours, 58 minutes"
+          "minutes": 2458.956,
+          "formatted": "40 hours, 59 minutes"
         },
         "books_equivalent": "6.83"
       },
@@ -331,7 +331,7 @@
             "formatted": "98 hours, 16 minutes"
           },
           "books_equivalent": "16.38",
-          "growth_rate": "70.6"
+          "growth_rate": "70.5"
         },
         "30 Areas/32 Literature notes/32.05 Quotes": {
           "words": 218199,
@@ -389,14 +389,14 @@
           "growth_rate": "9.0"
         },
         "30 Areas/33 Permanent notes/33.04 Creations/Newsletters": {
-          "words": 430045,
-          "internal_links": 3325,
+          "words": 429137,
+          "internal_links": 3320,
           "note_count": 229,
           "reading_time": {
-            "minutes": 1720,
-            "formatted": "28 hours, 40 minutes"
+            "minutes": 1717,
+            "formatted": "28 hours, 37 minutes"
           },
-          "books_equivalent": "4.78",
+          "books_equivalent": "4.77",
           "growth_rate": "7.8"
         },
         "30 Areas/34 Maps/34.01 MoCs": {
@@ -673,7 +673,6 @@
         "2025-11-01": 1,
         "2025-10-22": 2,
         "2025-10-28": 11,
-        "2025-09-12": 1,
         "2025-10-07": 6,
         "2025-09-30": 6,
         "2026-04-16": 20,
@@ -833,11 +832,11 @@
         "2026-07-20": 4
       },
       "age_distribution": {
-        "0-1m": 566,
-        "1-6m": 5753,
-        "6-12m": 4673,
+        "0-1m": 561,
+        "1-6m": 5756,
+        "6-12m": 4674,
         "1-2y": 4188,
-        "2y+": 2935
+        "2y+": 2936
       },
       "daily_note_streak": {
         "current": 1344,
@@ -875,7 +874,7 @@
         "2024-03": 15
       }
     },
-    "total_tasks": 7766,
+    "total_tasks": 7768,
     "special_files": {
       "canvases": 37,
       "templates": 64,
@@ -884,9 +883,9 @@
       }
     },
     "size": {
-      "total_bytes": 1146078188,
-      "md_files_bytes": 79470729,
-      "attachments_bytes": 1065293886,
+      "total_bytes": 1146156750,
+      "md_files_bytes": 79467540,
+      "attachments_bytes": 1065375637,
       "git_commits": 2996
     }
   },
@@ -898,12 +897,12 @@
       "private": 8775,
       "percentage": "51.6"
     },
-    "published_words": 4302480,
+    "published_words": 4301610,
     "reading_time": {
-      "minutes": 17209.92,
-      "formatted": "286 hours, 50 minutes"
+      "minutes": 17206.44,
+      "formatted": "286 hours, 46 minutes"
     },
-    "books_equivalent": 47.80533333333333,
+    "books_equivalent": 47.79566666666667,
     "topics": {
       "ai": {
         "count": 1315,
@@ -913,7 +912,7 @@
       "tools": {
         "count": 920,
         "formatted_name": "Tools",
-        "growth_rate": "19.0"
+        "growth_rate": "18.9"
       },
       "pkm": {
         "count": 859,
