@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-19 08:37:45",
+  "generated_at": "2026-10-19 11:44:33",
   "overall": {
-    "total_notes": 29933,
-    "total_words": 15112290,
+    "total_notes": 29938,
+    "total_words": 15121056,
     "reading_time": {
-      "minutes": 60449.16,
-      "formatted": "1007 hours, 29 minutes"
+      "minutes": 60484.224,
+      "formatted": "1008 hours, 4 minutes"
     },
-    "books_equivalent": 167.91433333333333,
+    "books_equivalent": 168.01173333333332,
     "content_age": {
       "average_days": {
         "days": 251,
@@ -25,278 +25,768 @@
       },
       "updates": {
         "last_week": {
-          "count": 7841,
-          "percentage": "26.2"
+          "count": 7864,
+          "percentage": "26.3"
         },
         "last_month": {
-          "count": 14808,
+          "count": 14825,
           "percentage": "49.5"
         },
         "last_quarter": {
-          "count": 16479,
+          "count": 16493,
           "percentage": "55.1"
         },
         "last_year": {
-          "count": 29933,
+          "count": 29938,
           "percentage": "100.0"
         },
         "this_year": {
-          "count": 29933,
+          "count": 29938,
           "percentage": "100.0"
         }
       }
     },
     "links": {
       "internal": {
-        "count": 256649,
+        "count": 256969,
         "average": "8.6"
       },
       "external": {
-        "count": 61942,
+        "count": 61975,
         "average": "2.1"
       }
     },
     "note_types": {
-      "type/media/movie": {
+      "movies": {
         "count": 4889,
-        "formatted_name": "Movie Media Type"
+        "formatted_name": "Movies",
+        "words": 992733,
+        "average_words": 203,
+        "average_internal_links": "1.0",
+        "created_by_year": {
+          "2026": 4889
+        },
+        "status": {
+          "done": 2054,
+          "backlog": 2827,
+          "scheduled": 8
+        }
       },
-      "type/permanent_note": {
-        "count": 3637,
-        "formatted_name": "Permanent Note Type"
+      "permanent_notes": {
+        "count": 3624,
+        "formatted_name": "Permanent Notes",
+        "words": 1720496,
+        "average_words": 475,
+        "average_internal_links": "8.7",
+        "created_by_year": {
+          "2022": 9,
+          "2023": 1,
+          "2024": 1405,
+          "2025": 373,
+          "2026": 1836
+        }
       },
-      "type/quote": {
+      "quotes": {
         "count": 2473,
-        "formatted_name": "Quote Type"
+        "formatted_name": "Quotes",
+        "words": 180770,
+        "average_words": 73,
+        "average_internal_links": "0.8",
+        "created_by_year": {
+          "2022": 22,
+          "2024": 622,
+          "2025": 1709,
+          "2026": 120
+        }
       },
-      "type/media/board_game": {
+      "board_games": {
         "count": 2338,
-        "formatted_name": "Board Game Media Type"
+        "formatted_name": "Board Games",
+        "words": 940617,
+        "average_words": 402,
+        "average_internal_links": "2.4",
+        "created_by_year": {
+          "2026": 2338
+        },
+        "status": {
+          "other": 2338
+        }
       },
-      "type/task": {
+      "tasks": {
         "count": 2224,
-        "formatted_name": "Task Type"
+        "formatted_name": "Tasks",
+        "words": 692354,
+        "average_words": 311,
+        "average_internal_links": "1.2",
+        "created_by_year": {
+          "2025": 41,
+          "2026": 2183
+        },
+        "status": {
+          "done": 193,
+          "backlog": 1661,
+          "scheduled": 353,
+          "active": 10,
+          "other": 3,
+          "unset": 1,
+          "waiting": 3
+        }
       },
-      "type/periodic_note": {
-        "count": 2177,
-        "formatted_name": "Periodic Note Type"
-      },
-      "type/media/video_game": {
+      "video_games": {
         "count": 1994,
-        "formatted_name": "Video Game Media Type"
+        "formatted_name": "Video Games",
+        "words": 496864,
+        "average_words": 249,
+        "average_internal_links": "1.0",
+        "created_by_year": {
+          "2026": 1994
+        },
+        "status": {
+          "backlog": 1915,
+          "done": 77,
+          "active": 1,
+          "abandoned": 1
+        }
       },
-      "type/periodic_note/daily": {
+      "daily_notes": {
         "count": 1824,
-        "formatted_name": "Daily Periodic Note Type"
+        "formatted_name": "Daily Notes",
+        "words": 677973,
+        "average_words": 372,
+        "average_internal_links": "17.3",
+        "created_by_year": {
+          "2024": 135,
+          "2025": 105,
+          "2026": 1584
+        }
       },
-      "type/person": {
-        "count": 1015,
-        "formatted_name": "Person Type"
+      "persons": {
+        "count": 1012,
+        "formatted_name": "Persons",
+        "words": 248841,
+        "average_words": 246,
+        "average_internal_links": "5.1",
+        "created_by_year": {
+          "2024": 588,
+          "2025": 119,
+          "2026": 305
+        }
       },
-      "type/media/tv_show": {
+      "tv_shows": {
         "count": 715,
-        "formatted_name": "Tv Show Media Type"
+        "formatted_name": "TV Shows",
+        "words": 333853,
+        "average_words": 467,
+        "average_internal_links": "1.0",
+        "created_by_year": {
+          "2026": 715
+        },
+        "status": {
+          "done": 93,
+          "backlog": 602,
+          "waiting": 19,
+          "active": 1
+        }
       },
-      "type/creation/quote": {
+      "own_quotes": {
         "count": 379,
-        "formatted_name": "Quote Creation Type"
+        "formatted_name": "Own Quotes",
+        "words": 31803,
+        "average_words": 84,
+        "average_internal_links": "0.3",
+        "created_by_year": {
+          "2022": 57,
+          "2023": 11,
+          "2024": 150,
+          "2025": 143,
+          "2026": 18
+        }
       },
-      "type/creation/article": {
-        "count": 352,
-        "formatted_name": "Article Creation Type"
+      "own_articles": {
+        "count": 353,
+        "formatted_name": "Own Articles",
+        "words": 961000,
+        "average_words": 2722,
+        "average_internal_links": "26.2",
+        "created_by_year": {
+          "2024": 261,
+          "2025": 6,
+          "2026": 86
+        },
+        "status": {
+          "done": 322,
+          "scheduled": 4,
+          "active": 18,
+          "backlog": 9
+        }
       },
-      "type/literature_note": {
+      "literature_notes": {
         "count": 323,
-        "formatted_name": "Literature Note Type"
+        "formatted_name": "Literature Notes",
+        "words": 58704,
+        "average_words": 182,
+        "average_internal_links": "1.3",
+        "created_by_year": {
+          "2022": 3,
+          "2023": 1,
+          "2024": 86,
+          "2025": 226,
+          "2026": 7
+        }
       },
-      "type/ai_wiki": {
+      "ai_wiki_articles": {
         "count": 316,
-        "formatted_name": "Ai Wiki Type"
+        "formatted_name": "AI Wiki Articles",
+        "words": 317253,
+        "average_words": 1004,
+        "average_internal_links": "11.0",
+        "created_by_year": {
+          "2026": 316
+        }
       },
-      "type/creation/product": {
+      "own_products": {
         "count": 286,
-        "formatted_name": "Product Creation Type"
+        "formatted_name": "Own Products",
+        "words": 571638,
+        "average_words": 1999,
+        "average_internal_links": "25.9",
+        "created_by_year": {
+          "2022": 27,
+          "2023": 6,
+          "2024": 6,
+          "2025": 149,
+          "2026": 98
+        },
+        "status": {
+          "unset": 283,
+          "backlog": 3
+        }
       },
-      "type/map": {
+      "maps_of_content": {
         "count": 268,
-        "formatted_name": "Map Type"
+        "formatted_name": "Maps of Content",
+        "words": 395900,
+        "average_words": 1477,
+        "average_internal_links": "181.2",
+        "created_by_year": {
+          "2024": 3,
+          "2025": 131,
+          "2026": 134
+        }
       },
-      "type/map/moc": {
+      "book_notes": {
         "count": 268,
-        "formatted_name": "Moc Map Type"
+        "formatted_name": "Book Notes",
+        "words": 103760,
+        "average_words": 387,
+        "average_internal_links": "4.0",
+        "created_by_year": {
+          "2024": 143,
+          "2025": 85,
+          "2026": 40
+        },
+        "status": {
+          "backlog": 135,
+          "done": 94,
+          "scheduled": 22,
+          "active": 13,
+          "waiting": 4
+        }
       },
-      "type/book": {
-        "count": 268,
-        "formatted_name": "Book Type"
-      },
-      "type/periodic_note/weekly": {
+      "weekly_notes": {
         "count": 266,
-        "formatted_name": "Weekly Periodic Note Type"
+        "formatted_name": "Weekly Notes",
+        "words": 287603,
+        "average_words": 1081,
+        "average_internal_links": "83.7",
+        "created_by_year": {
+          "2025": 2,
+          "2026": 264
+        }
       },
-      "type/creation/newsletter": {
+      "own_newsletters": {
         "count": 228,
-        "formatted_name": "Newsletter Creation Type"
+        "formatted_name": "Own Newsletters",
+        "words": 430165,
+        "average_words": 1887,
+        "average_internal_links": "13.8",
+        "created_by_year": {
+          "2024": 208,
+          "2025": 6,
+          "2026": 14
+        },
+        "status": {
+          "done": 228
+        }
       },
-      "type/media/anime": {
+      "anime": {
         "count": 227,
-        "formatted_name": "Anime Media Type"
+        "formatted_name": "Anime",
+        "words": 55239,
+        "average_words": 243,
+        "average_internal_links": "1.0",
+        "created_by_year": {
+          "2026": 227
+        },
+        "status": {
+          "backlog": 183,
+          "done": 44
+        }
       },
-      "type/creation/course": {
+      "own_courses": {
         "count": 154,
-        "formatted_name": "Course Creation Type"
+        "formatted_name": "Own Courses",
+        "words": 288328,
+        "average_words": 1872,
+        "average_internal_links": "2.7",
+        "created_by_year": {
+          "2024": 25,
+          "2025": 129
+        },
+        "status": {
+          "unset": 115,
+          "done": 38,
+          "active": 1
+        }
       },
-      "type/media/board_game_item": {
+      "board_game_items": {
         "count": 152,
-        "formatted_name": "Board Game Item Media Type"
+        "formatted_name": "Board Game Items",
+        "words": 21558,
+        "average_words": 142,
+        "average_internal_links": "0.7",
+        "created_by_year": {
+          "2026": 152
+        }
       },
-      "type/ai_agent": {
-        "count": 149,
-        "formatted_name": "Ai Agent Type"
-      },
-      "type/fleeting_note": {
+      "fleeting_notes": {
         "count": 147,
-        "formatted_name": "Fleeting Note Type"
+        "formatted_name": "Fleeting Notes",
+        "words": 33224,
+        "average_words": 226,
+        "average_internal_links": "0.3",
+        "created_by_year": {
+          "2024": 5,
+          "2025": 142
+        }
       },
-      "type/idea": {
+      "ideas": {
         "count": 109,
-        "formatted_name": "Idea Type"
+        "formatted_name": "Ideas",
+        "words": 32193,
+        "average_words": 295,
+        "average_internal_links": "0.7",
+        "created_by_year": {
+          "2022": 1,
+          "2024": 25,
+          "2025": 25,
+          "2026": 58
+        },
+        "status": {
+          "backlog": 104,
+          "active": 5
+        }
       },
-      "type/project": {
+      "projects": {
         "count": 97,
-        "formatted_name": "Project Type"
+        "formatted_name": "Projects",
+        "words": 179303,
+        "average_words": 1848,
+        "average_internal_links": "19.2",
+        "created_by_year": {
+          "2024": 1,
+          "2025": 22,
+          "2026": 74
+        },
+        "status": {
+          "done": 29,
+          "abandoned": 9,
+          "other": 2,
+          "scheduled": 35,
+          "waiting": 12,
+          "active": 10
+        }
       },
-      "type/creation/video": {
+      "own_videos": {
         "count": 86,
-        "formatted_name": "Video Creation Type"
+        "formatted_name": "Own Videos",
+        "words": 71181,
+        "average_words": 828,
+        "average_internal_links": "3.4",
+        "created_by_year": {
+          "2024": 3,
+          "2025": 33,
+          "2026": 50
+        },
+        "status": {
+          "done": 48,
+          "unset": 12,
+          "active": 3,
+          "backlog": 23
+        }
       },
-      "type/creation/news": {
+      "own_news": {
         "count": 81,
-        "formatted_name": "News Creation Type"
+        "formatted_name": "Own News",
+        "words": 69223,
+        "average_words": 855,
+        "average_internal_links": "14.4",
+        "created_by_year": {
+          "2026": 81
+        }
       },
-      "type/expression": {
+      "expressions": {
         "count": 63,
-        "formatted_name": "Expression Type"
+        "formatted_name": "Expressions",
+        "words": 2939,
+        "average_words": 47,
+        "average_internal_links": "0.4",
+        "created_by_year": {
+          "2024": 7,
+          "2025": 56
+        }
       },
-      "type/folder_note": {
-        "count": 60,
-        "formatted_name": "Folder Note Type"
+      "folder_notes": {
+        "count": 59,
+        "formatted_name": "Folder Notes",
+        "words": 180431,
+        "average_words": 3058,
+        "average_internal_links": "513.9",
+        "created_by_year": {
+          "2024": 36,
+          "2025": 8,
+          "2026": 15
+        }
       },
-      "type/periodic_note/monthly": {
+      "monthly_notes": {
         "count": 58,
-        "formatted_name": "Monthly Periodic Note Type"
+        "formatted_name": "Monthly Notes",
+        "words": 181680,
+        "average_words": 3132,
+        "average_internal_links": "314.8",
+        "created_by_year": {
+          "2024": 1,
+          "2026": 57
+        }
       },
-      "type/activity": {
+      "activities": {
         "count": 57,
-        "formatted_name": "Activity Type"
+        "formatted_name": "Activities",
+        "words": 59567,
+        "average_words": 1045,
+        "average_internal_links": "30.0",
+        "created_by_year": {
+          "2024": 7,
+          "2025": 7,
+          "2026": 43
+        },
+        "status": {
+          "waiting": 26,
+          "scheduled": 1,
+          "active": 29,
+          "backlog": 1
+        }
       },
-      "type/process": {
+      "processes": {
         "count": 48,
-        "formatted_name": "Process Type"
+        "formatted_name": "Processes",
+        "words": 38963,
+        "average_words": 812,
+        "average_internal_links": "6.1",
+        "created_by_year": {
+          "2024": 23,
+          "2025": 5,
+          "2026": 20
+        }
       },
-      "type/goal": {
+      "goals": {
         "count": 47,
-        "formatted_name": "Goal Type"
+        "formatted_name": "Goals",
+        "words": 23778,
+        "average_words": 506,
+        "average_internal_links": "9.6",
+        "created_by_year": {
+          "2024": 1,
+          "2025": 22,
+          "2026": 24
+        },
+        "status": {
+          "unset": 1,
+          "abandoned": 4,
+          "other": 1,
+          "done": 10,
+          "waiting": 10,
+          "active": 19,
+          "scheduled": 1,
+          "backlog": 1
+        }
       },
-      "type/dot": {
-        "count": 22,
-        "formatted_name": "Dot Type"
+      "dots": {
+        "count": 21,
+        "formatted_name": "Dots",
+        "words": 2107,
+        "average_words": 100,
+        "average_internal_links": "0.9",
+        "created_by_year": {
+          "2025": 15,
+          "2026": 6
+        },
+        "status": {
+          "backlog": 19,
+          "active": 2
+        }
       },
-      "type/periodic_note/quarterly": {
+      "ai_prompts": {
+        "count": 20,
+        "formatted_name": "AI Prompts",
+        "words": 2571430,
+        "average_words": 128572,
+        "average_internal_links": "17.3",
+        "created_by_year": {
+          "2025": 3,
+          "2026": 17
+        }
+      },
+      "quarterly_notes": {
         "count": 19,
-        "formatted_name": "Quarterly Periodic Note Type"
+        "formatted_name": "Quarterly Notes",
+        "words": 4633,
+        "average_words": 244,
+        "average_internal_links": "4.8",
+        "created_by_year": {
+          "2026": 19
+        }
       },
-      "type/creation/email": {
+      "own_emails": {
         "count": 15,
-        "formatted_name": "Email Creation Type"
+        "formatted_name": "Own Emails",
+        "words": 4561,
+        "average_words": 304,
+        "average_internal_links": "1.5",
+        "created_by_year": {
+          "2026": 15
+        },
+        "status": {
+          "active": 5,
+          "done": 10
+        }
       },
-      "type/creation/social_post": {
+      "own_social_posts": {
         "count": 14,
-        "formatted_name": "Social Post Creation Type"
+        "formatted_name": "Own Social Posts",
+        "words": 6077,
+        "average_words": 434,
+        "average_internal_links": "7.8",
+        "created_by_year": {
+          "2026": 14
+        },
+        "status": {
+          "done": 8,
+          "active": 6
+        }
       },
-      "type/ai/prompt": {
+      "own_video_transcripts": {
         "count": 12,
-        "formatted_name": "Prompt Ai Type"
+        "formatted_name": "Own Video Transcripts",
+        "words": 76859,
+        "average_words": 6405,
+        "average_internal_links": "0.0",
+        "created_by_year": {
+          "2026": 12
+        }
       },
-      "type/transcript/video": {
-        "count": 12,
-        "formatted_name": "Video Transcript Type"
-      },
-      "type/creation/poem": {
+      "own_poems": {
         "count": 9,
-        "formatted_name": "Poem Creation Type"
+        "formatted_name": "Own Poems",
+        "words": 1167,
+        "average_words": 130,
+        "average_internal_links": "0.0",
+        "created_by_year": {
+          "2025": 9
+        },
+        "status": {
+          "done": 9
+        }
       },
-      "type/periodic_note/yearly": {
+      "yearly_notes": {
         "count": 8,
-        "formatted_name": "Yearly Periodic Note Type"
+        "formatted_name": "Yearly Notes",
+        "words": 175538,
+        "average_words": 21942,
+        "average_internal_links": "1807.3",
+        "created_by_year": {
+          "2024": 1,
+          "2026": 7
+        }
       },
-      "type/transcript/event": {
-        "count": 8,
-        "formatted_name": "Event Transcript Type"
-      },
-      "type/routine": {
+      "routines": {
         "count": 6,
-        "formatted_name": "Routine Type"
+        "formatted_name": "Routines",
+        "words": 233,
+        "average_words": 39,
+        "average_internal_links": "3.0",
+        "created_by_year": {
+          "2024": 1,
+          "2026": 5
+        }
       },
-      "type/creation/mailing_list": {
+      "mailing_lists": {
         "count": 5,
-        "formatted_name": "Mailing List Creation Type"
+        "formatted_name": "Mailing Lists",
+        "words": 808,
+        "average_words": 162,
+        "average_internal_links": "3.0",
+        "created_by_year": {
+          "2026": 5
+        }
       },
-      "type/maintenance": {
+      "maintenance_notes": {
         "count": 5,
-        "formatted_name": "Maintenance Type"
+        "formatted_name": "Maintenance Notes",
+        "words": 1514,
+        "average_words": 303,
+        "average_internal_links": "0.2",
+        "created_by_year": {
+          "2024": 1,
+          "2025": 3,
+          "2026": 1
+        }
       },
-      "type/curated": {
+      "curated_content": {
         "count": 4,
-        "formatted_name": "Curated Type"
+        "formatted_name": "Curated Content",
+        "words": 6328,
+        "average_words": 1582,
+        "average_internal_links": "3.0",
+        "created_by_year": {
+          "2026": 4
+        }
       },
-      "type/board": {
+      "boards": {
         "count": 4,
-        "formatted_name": "Board Type"
+        "formatted_name": "Boards",
+        "words": 24833,
+        "average_words": 6208,
+        "average_internal_links": "33.3",
+        "created_by_year": {
+          "2024": 2,
+          "2025": 2
+        }
       },
-      "type/plan": {
+      "plans": {
         "count": 3,
-        "formatted_name": "Plan Type"
+        "formatted_name": "Plans",
+        "words": 2205,
+        "average_words": 735,
+        "average_internal_links": "34.3",
+        "created_by_year": {
+          "2024": 1,
+          "2026": 2
+        },
+        "status": {
+          "done": 1,
+          "unset": 1,
+          "active": 1
+        }
       },
-      "type/creation/book": {
+      "own_books": {
         "count": 3,
-        "formatted_name": "Book Creation Type"
+        "formatted_name": "Own Books",
+        "words": 3944,
+        "average_words": 1315,
+        "average_internal_links": "76.7",
+        "created_by_year": {
+          "2025": 1,
+          "2026": 2
+        },
+        "status": {
+          "scheduled": 1,
+          "done": 1,
+          "backlog": 1
+        }
       },
-      "type/session/board_game": {
+      "board_game_sessions": {
         "count": 3,
-        "formatted_name": "Board Game Session Type"
+        "formatted_name": "Board Game Sessions",
+        "words": 335,
+        "average_words": 112,
+        "average_internal_links": "0.0",
+        "created_by_year": {
+          "2026": 3
+        }
       },
-      "type/media/tv_season": {
+      "tv_seasons": {
         "count": 2,
-        "formatted_name": "Tv Season Media Type"
+        "formatted_name": "TV Seasons",
+        "words": 412,
+        "average_words": 206,
+        "average_internal_links": "1.0",
+        "created_by_year": {
+          "2026": 2
+        },
+        "status": {
+          "backlog": 1,
+          "active": 1
+        }
       },
-      "type/creation/story": {
+      "own_stories": {
         "count": 2,
-        "formatted_name": "Story Creation Type"
+        "formatted_name": "Own Stories",
+        "words": 1870,
+        "average_words": 935,
+        "average_internal_links": "0.5",
+        "created_by_year": {
+          "2022": 1,
+          "2024": 1
+        },
+        "status": {
+          "done": 2
+        }
       },
-      "type/poem": {
+      "poems": {
         "count": 2,
-        "formatted_name": "Poem Type"
+        "formatted_name": "Poems",
+        "words": 280,
+        "average_words": 140,
+        "average_internal_links": "1.0",
+        "created_by_year": {
+          "2022": 2
+        }
       },
-      "type/campaign/board_game": {
+      "board_game_campaigns": {
         "count": 1,
-        "formatted_name": "Board Game Campaign Type"
+        "formatted_name": "Board Game Campaigns",
+        "words": 280,
+        "average_words": 280,
+        "average_internal_links": "8.0",
+        "created_by_year": {
+          "2026": 1
+        },
+        "status": {
+          "active": 1
+        }
       }
+    },
+    "note_type_coverage": {
+      "typed": 25402,
+      "untyped": 1027,
+      "excluded": 3509
     },
     "periodic_notes": {
       "daily": {
-        "count": 1860,
-        "words": 703439,
-        "average_words": 378,
-        "internal_links": 31561,
-        "average_internal_links": 16.968279569892474,
-        "books": 7.815988888888889,
-        "reading_minutes": 2813.756,
-        "reading_hours": 46.89593333333333,
+        "count": 1824,
+        "words": 677973,
+        "average_words": 372,
+        "internal_links": 31585,
+        "average_internal_links": 17.316337719298247,
+        "books": 7.533033333333333,
+        "reading_minutes": 2711.892,
+        "reading_hours": 45.1982,
         "reading_time": {
-          "minutes": 2813.756,
-          "formatted": "46 hours, 54 minutes"
+          "minutes": 2711.892,
+          "formatted": "45 hours, 12 minutes"
         },
-        "books_equivalent": "7.82"
+        "books_equivalent": "7.53"
       },
       "weekly": {
         "count": 266,
@@ -328,21 +818,6 @@
         },
         "books_equivalent": "2.02"
       },
-      "yearly": {
-        "count": 8,
-        "words": 175538,
-        "average_words": 21942,
-        "internal_links": 14458,
-        "average_internal_links": 1807.25,
-        "books": 1.9504222222222223,
-        "reading_minutes": 702.152,
-        "reading_hours": 11.702533333333333,
-        "reading_time": {
-          "minutes": 702.152,
-          "formatted": "11 hours, 42 minutes"
-        },
-        "books_equivalent": "1.95"
-      },
       "quarterly": {
         "count": 19,
         "words": 4633,
@@ -357,32 +832,47 @@
           "formatted": "19 minutes"
         },
         "books_equivalent": "0.05"
+      },
+      "yearly": {
+        "count": 8,
+        "words": 175538,
+        "average_words": 21942,
+        "internal_links": 14458,
+        "average_internal_links": 1807.25,
+        "books": 1.9504222222222223,
+        "reading_minutes": 702.152,
+        "reading_hours": 11.702533333333333,
+        "reading_time": {
+          "minutes": 702.152,
+          "formatted": "11 hours, 42 minutes"
+        },
+        "books_equivalent": "1.95"
       }
     },
     "folders": {
-      "count": 2287,
+      "count": 2286,
       "top_folders": {
         "30 Areas/38 Media/38.01 Movies": {
-          "words": 1011980,
-          "internal_links": 9771,
+          "words": 1011982,
+          "internal_links": 9772,
           "note_count": 4891,
           "reading_time": {
             "minutes": 4048,
             "formatted": "67 hours, 28 minutes"
           },
           "books_equivalent": "11.24",
-          "growth_rate": "13339.1"
+          "growth_rate": "12227.5"
         },
         "30 Areas/33 Permanent notes/33.02 Content": {
-          "words": 1719849,
-          "internal_links": 35389,
-          "note_count": 3631,
+          "words": 1725970,
+          "internal_links": 35616,
+          "note_count": 3636,
           "reading_time": {
-            "minutes": 6879,
-            "formatted": "114 hours, 39 minutes"
+            "minutes": 6904,
+            "formatted": "115 hours, 4 minutes"
           },
-          "books_equivalent": "19.11",
-          "growth_rate": "72.6"
+          "books_equivalent": "19.18",
+          "growth_rate": "72.7"
         },
         "30 Areas/32 Literature notes/32.05 Quotes": {
           "words": 218199,
@@ -393,7 +883,7 @@
             "formatted": "14 hours, 33 minutes"
           },
           "books_equivalent": "2.42",
-          "growth_rate": "49.5"
+          "growth_rate": "49.4"
         },
         "30 Areas/38 Media/38.06 Video Games": {
           "words": 507287,
@@ -404,7 +894,7 @@
             "formatted": "33 hours, 49 minutes"
           },
           "books_equivalent": "5.64",
-          "growth_rate": "5440.9"
+          "growth_rate": "4987.5"
         },
         "30 Areas/33 Permanent notes/33.04 Creations/Quotes": {
           "words": 38255,
@@ -418,8 +908,8 @@
           "growth_rate": "7.6"
         },
         "30 Areas/33 Permanent notes/33.04 Creations/Articles": {
-          "words": 971147,
-          "internal_links": 9594,
+          "words": 971206,
+          "internal_links": 9597,
           "note_count": 358,
           "reading_time": {
             "minutes": 3885,
@@ -440,8 +930,8 @@
           "growth_rate": "6.5"
         },
         "30 Areas/34 Maps/34.01 MoCs": {
-          "words": 396546,
-          "internal_links": 48819,
+          "words": 396608,
+          "internal_links": 48826,
           "note_count": 269,
           "reading_time": {
             "minutes": 1586,
@@ -470,7 +960,7 @@
             "formatted": "28 hours, 52 minutes"
           },
           "books_equivalent": "4.81",
-          "growth_rate": "7.6"
+          "growth_rate": "7.5"
         },
         "30 Areas/38 Media/38.03 Anime": {
           "words": 56270,
@@ -481,7 +971,7 @@
             "formatted": "3 hours, 45 minutes"
           },
           "books_equivalent": "0.63",
-          "growth_rate": "621.8"
+          "growth_rate": "570.0"
         },
         "30 Areas/31 Fleeting notes": {
           "words": 51326,
@@ -498,7 +988,7 @@
     },
     "tags": {
       "total": 3027,
-      "total_area_notes": 23751,
+      "total_area_notes": 23756,
       "notes_without_tags": {
         "count": 11,
         "percentage": "0.0"
@@ -506,11 +996,11 @@
       "average_per_note": "3.9",
       "top_tags": {
         "ai": {
-          "count": 1598,
+          "count": 1601,
           "formatted_name": "Ai"
         },
         "tools": {
-          "count": 1020,
+          "count": 1025,
           "formatted_name": "Tools"
         },
         "pkm": {
@@ -534,15 +1024,15 @@
           "formatted_name": "Obsidian"
         },
         "software_development": {
-          "count": 607,
+          "count": 608,
           "formatted_name": "Software Development"
         },
         "ai/tools": {
-          "count": 461,
+          "count": 464,
           "formatted_name": "Tools Ai"
         },
         "ai/agents": {
-          "count": 402,
+          "count": 404,
           "formatted_name": "Agents Ai"
         },
         "learning": {
@@ -562,7 +1052,7 @@
           "formatted_name": "Life"
         },
         "ai/llms": {
-          "count": 317,
+          "count": 318,
           "formatted_name": "Llms Ai"
         },
         "concepts": {
@@ -570,7 +1060,7 @@
           "formatted_name": "Concepts"
         },
         "software_development/tools": {
-          "count": 300,
+          "count": 302,
           "formatted_name": "Tools Software Development"
         },
         "success": {
@@ -578,7 +1068,7 @@
           "formatted_name": "Success"
         },
         "open_source": {
-          "count": 274,
+          "count": 277,
           "formatted_name": "Open Source"
         },
         "books": {
@@ -592,8 +1082,8 @@
       "average_links": "181.2"
     },
     "people_notes": {
-      "count": 1015,
-      "internal_links": 5159,
+      "count": 1012,
+      "internal_links": 5132,
       "average_links": "5.1"
     },
     "ai": {
@@ -605,7 +1095,7 @@
       "created_by_month": {
         "2026-04": 857,
         "2026-03": 965,
-        "2026-10": 10884,
+        "2026-10": 10889,
         "2026-05": 2180,
         "2025-06": 188,
         "2024-12": 426,
@@ -731,13 +1221,13 @@
         "2026-01-02": 11,
         "2026-06-25": 17,
         "2025-12-31": 10,
-        "2026-10-02": 16,
+        "2026-10-02": 15,
         "2026-10-15": 32,
         "2026-10-17": 41,
         "2026-10-09": 217,
         "2026-09-12": 9,
+        "2026-10-19": 20,
         "2026-10-13": 56,
-        "2026-10-19": 14,
         "2026-07-21": 14,
         "2026-09-10": 6,
         "2026-09-28": 15,
@@ -887,18 +1377,18 @@
         "2026-07-20": 4
       },
       "age_distribution": {
-        "0-1m": 11157,
-        "1-6m": 5382,
-        "6-12m": 5940,
+        "0-1m": 11162,
+        "1-6m": 5372,
+        "6-12m": 5950,
         "1-2y": 4347,
         "2y+": 3107
       },
       "daily_note_streak": {
-        "current": 1,
-        "longest": 1354
+        "current": 1380,
+        "longest": 1380
       },
       "git_commits_by_month": {
-        "2026-10": 170,
+        "2026-10": 171,
         "2026-09": 264,
         "2026-08": 257,
         "2026-07": 66,
@@ -930,53 +1420,53 @@
         "2024-03": 15
       }
     },
-    "total_tasks": 8585,
+    "total_tasks": 8588,
     "special_files": {
       "canvases": 37,
       "templates": 78,
       "attachments": {
-        "public": 13670
+        "public": 13671
       }
     },
     "size": {
-      "total_bytes": 1831615051,
-      "md_files_bytes": 118619818,
-      "attachments_bytes": 1711635822,
-      "git_commits": 3274
+      "total_bytes": 1831675062,
+      "md_files_bytes": 118680645,
+      "attachments_bytes": 1711637317,
+      "git_commits": 3275
     }
   },
   "publication": {
-    "total_published": 33698,
-    "published_notes_md": 20028,
+    "total_published": 33714,
+    "published_notes_md": 20043,
     "public_ratio": {
-      "public": 20028,
-      "private": 9905,
+      "public": 20043,
+      "private": 9895,
       "percentage": "66.9"
     },
-    "published_words": 8038581,
+    "published_words": 8054168,
     "reading_time": {
-      "minutes": 32154.324,
-      "formatted": "535 hours, 54 minutes"
+      "minutes": 32216.672,
+      "formatted": "536 hours, 57 minutes"
     },
-    "books_equivalent": 89.31756666666666,
+    "books_equivalent": 89.49075555555555,
     "topics": {
       "ai": {
-        "count": 1456,
+        "count": 1463,
         "formatted_name": "Ai",
-        "growth_rate": "52.8"
+        "growth_rate": "52.9"
       },
       "tools": {
-        "count": 1013,
+        "count": 1022,
         "formatted_name": "Tools",
-        "growth_rate": "20.4"
+        "growth_rate": "20.5"
       },
       "pkm": {
-        "count": 907,
+        "count": 908,
         "formatted_name": "Pkm",
         "growth_rate": "18.5"
       },
       "knowledge_management": {
-        "count": 860,
+        "count": 861,
         "formatted_name": "Knowledge Management",
         "growth_rate": "17.6"
       },
@@ -986,9 +1476,9 @@
         "growth_rate": "16.0"
       },
       "software_development": {
-        "count": 604,
+        "count": 605,
         "formatted_name": "Software Development",
-        "growth_rate": "20.3"
+        "growth_rate": "20.4"
       },
       "obsidian": {
         "count": 444,
@@ -996,7 +1486,7 @@
         "growth_rate": "13.6"
       },
       "learning": {
-        "count": 393,
+        "count": 394,
         "formatted_name": "Learning",
         "growth_rate": "7.9"
       },
@@ -1025,15 +1515,15 @@
         "formatted_name": "Success",
         "growth_rate": "5.8"
       },
+      "open_source": {
+        "count": 277,
+        "formatted_name": "Open Source",
+        "growth_rate": "9.3"
+      },
       "writing": {
         "count": 276,
         "formatted_name": "Writing",
         "growth_rate": "14.2"
-      },
-      "open_source": {
-        "count": 273,
-        "formatted_name": "Open Source",
-        "growth_rate": "9.2"
       },
       "books": {
         "count": 248,
@@ -1063,7 +1553,7 @@
       "summaries": {
         "count": 210,
         "formatted_name": "Summaries",
-        "growth_rate": "7.1"
+        "growth_rate": "7.0"
       },
       "business": {
         "count": 207,
@@ -1081,7 +1571,7 @@
         "growth_rate": "4.0"
       },
       "content_creation": {
-        "count": 191,
+        "count": 192,
         "formatted_name": "Content Creation",
         "growth_rate": "3.8"
       }
@@ -1091,11 +1581,11 @@
       "2023": 19,
       "2024": 3508,
       "2025": 3039,
-      "2026": 13341
+      "2026": 13356
     },
     "published_by_month": {
       "2026-05": 368,
-      "2026-10": 10565,
+      "2026-10": 10580,
       "2024-04": 153,
       "2025-10": 130,
       "2026-02": 236,
