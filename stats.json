@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-19 11:44:33",
+  "generated_at": "2026-10-19 12:03:06",
   "overall": {
     "total_notes": 29938,
-    "total_words": 15121056,
+    "total_words": 15121312,
     "reading_time": {
-      "minutes": 60484.224,
-      "formatted": "1008 hours, 4 minutes"
+      "minutes": 60485.248,
+      "formatted": "1008 hours, 5 minutes"
     },
-    "books_equivalent": 168.01173333333332,
+    "books_equivalent": 168.0145777777778,
     "content_age": {
       "average_days": {
         "days": 251,
@@ -25,7 +25,7 @@
       },
       "updates": {
         "last_week": {
-          "count": 7864,
+          "count": 7876,
           "percentage": "26.3"
         },
         "last_month": {
@@ -48,11 +48,11 @@
     },
     "links": {
       "internal": {
-        "count": 256969,
+        "count": 257030,
         "average": "8.6"
       },
       "external": {
-        "count": 61975,
+        "count": 61981,
         "average": "2.1"
       }
     },
@@ -247,7 +247,7 @@
       "own_products": {
         "count": 286,
         "formatted_name": "Own Products",
-        "words": 571638,
+        "words": 571768,
         "average_words": 1999,
         "average_internal_links": "25.9",
         "created_by_year": {
@@ -265,9 +265,9 @@
       "maps_of_content": {
         "count": 268,
         "formatted_name": "Maps of Content",
-        "words": 395900,
-        "average_words": 1477,
-        "average_internal_links": "181.2",
+        "words": 396061,
+        "average_words": 1478,
+        "average_internal_links": "181.4",
         "created_by_year": {
           "2024": 3,
           "2025": 131,
@@ -665,8 +665,8 @@
       "boards": {
         "count": 4,
         "formatted_name": "Boards",
-        "words": 24833,
-        "average_words": 6208,
+        "words": 24898,
+        "average_words": 6225,
         "average_internal_links": "33.3",
         "created_by_year": {
           "2024": 2,
@@ -930,12 +930,12 @@
           "growth_rate": "6.5"
         },
         "30 Areas/34 Maps/34.01 MoCs": {
-          "words": 396608,
-          "internal_links": 48826,
+          "words": 396769,
+          "internal_links": 48883,
           "note_count": 269,
           "reading_time": {
-            "minutes": 1586,
-            "formatted": "26 hours, 26 minutes"
+            "minutes": 1587,
+            "formatted": "26 hours, 27 minutes"
           },
           "books_equivalent": "4.41",
           "growth_rate": "8.8"
@@ -1079,7 +1079,7 @@
     },
     "mocs": {
       "count": 268,
-      "average_links": "181.2"
+      "average_links": "181.4"
     },
     "people_notes": {
       "count": 1012,
@@ -1420,7 +1420,7 @@
         "2024-03": 15
       }
     },
-    "total_tasks": 8588,
+    "total_tasks": 8594,
     "special_files": {
       "canvases": 37,
       "templates": 78,
@@ -1429,9 +1429,9 @@
       }
     },
     "size": {
-      "total_bytes": 1831675062,
-      "md_files_bytes": 118680645,
-      "attachments_bytes": 1711637317,
+      "total_bytes": 1831685577,
+      "md_files_bytes": 118680029,
+      "attachments_bytes": 1711648448,
       "git_commits": 3275
     }
   },
@@ -1443,12 +1443,12 @@
       "private": 9895,
       "percentage": "66.9"
     },
-    "published_words": 8054168,
+    "published_words": 8054359,
     "reading_time": {
-      "minutes": 32216.672,
+      "minutes": 32217.436,
       "formatted": "536 hours, 57 minutes"
     },
-    "books_equivalent": 89.49075555555555,
+    "books_equivalent": 89.49287777777778,
     "topics": {
       "ai": {
         "count": 1463,
