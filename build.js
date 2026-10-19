@@ -142,6 +142,22 @@ function barRow(label, count, max, hue) {
     </div>`;
 }
 
+function progressRow(label, status, total) {
+  const done = status.done || 0;
+  const active = status.active || 0;
+  const donePct = (done / total) * 100;
+  const activePct = (active / total) * 100;
+  return `
+    <div class="flex items-center gap-2 sm:gap-3">
+      <span class="w-24 sm:w-44 shrink-0 text-xs sm:text-sm text-right truncate" style="color:var(--text)">${label}</span>
+      <div class="flex-1 min-w-0 h-5 rounded-r overflow-hidden flex" style="background:rgba(0,0,0,0.25)">
+        <div class="h-full bar-fill" style="width:${donePct}%;background:var(--series-green)"></div>
+        <div class="h-full bar-fill" style="width:${activePct}%;background:var(--series-blue)"></div>
+      </div>
+      <span class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm font-mono" style="color:var(--muted)">${fmt(done)} / ${fmt(total)}</span>
+    </div>`;
+}
+
 function titleCase(s) {
   return String(s || "").replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
@@ -202,6 +218,11 @@ function generateHtml(stats, ctaProducts, outputFilePath) {
   const noteTypes = allNoteTypes.slice(0, 12);
   const restNoteTypes = allNoteTypes.slice(12);
   const maxType = Math.max(...noteTypes.map(([, d]) => d.count));
+  // Note types with a status workflow, ranked by how much got done
+  const progressTypes = allNoteTypes
+    .filter(([, d]) => d.status && ((d.status.done || 0) + (d.status.active || 0)) > 0)
+    .sort(([, a], [, b]) => (b.status.done || 0) - (a.status.done || 0));
+  const coverage = o.note_type_coverage || null;
   const ageEntries = Object.entries(ageDist);
   const maxAge = Math.max(1, ...ageEntries.map(([, v]) => v));
   const AGE_LABELS = { "0-1m": "≤ 1 month", "1-6m": "1–6 months", "6-12m": "6–12 months", "1-2y": "1–2 years", "2y+": "2+ years" };
@@ -445,6 +466,19 @@ function generateHtml(stats, ctaProducts, outputFilePath) {
         </div>
       </div>
     </section>
+
+    ${progressTypes.length ? `
+    <!-- Progress -->
+    <section class="mt-14">
+      <h2 class="section-title reveal">Getting things done</h2>
+      <p class="mt-2 text-sm max-w-2xl reveal" style="color:var(--muted)">Every note type with a workflow tracks where each note stands. Green is done, blue is in progress.</p>
+      <div class="card p-6 mt-6 reveal">
+        <div class="chart-well space-y-2.5">
+          ${progressTypes.map(([, d]) => progressRow(d.formatted_name, d.status, d.count)).join("")}
+        </div>
+        ${coverage ? `<p class="text-sm mt-4" style="color:var(--muted)">${fmt(coverage.typed)} notes (${(coverage.typed / Math.max(1, o.total_notes) * 100).toFixed(0)}%) are classified into ${allNoteTypes.length} note types.</p>` : ""}
+      </div>
+    </section>` : ""}
 
     <!-- AI assistant -->
     <section class="mt-14">
