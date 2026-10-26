@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-26 14:22:04",
+  "generated_at": "2026-10-26 14:22:05",
   "overall": {
     "total_notes": 30339,
-    "total_words": 15475492,
+    "total_words": 15479063,
     "reading_time": {
-      "minutes": 61901.968,
-      "formatted": "1031 hours, 42 minutes"
+      "minutes": 61916.252,
+      "formatted": "1031 hours, 56 minutes"
     },
-    "books_equivalent": 171.9499111111111,
+    "books_equivalent": 171.98958888888887,
     "content_age": {
       "average_days": {
         "days": 255,
@@ -1437,8 +1437,8 @@
       }
     },
     "size": {
-      "total_bytes": 2015843134,
-      "md_files_bytes": 121120944,
+      "total_bytes": 2015845015,
+      "md_files_bytes": 121122825,
       "attachments_bytes": 1893365142,
       "git_commits": 3311
     }
@@ -1451,12 +1451,12 @@
       "private": 10139,
       "percentage": "66.6"
     },
-    "published_words": 8185375,
+    "published_words": 8188946,
     "reading_time": {
-      "minutes": 32741.5,
-      "formatted": "545 hours, 42 minutes"
+      "minutes": 32755.784,
+      "formatted": "545 hours, 56 minutes"
     },
-    "books_equivalent": 90.9486111111111,
+    "books_equivalent": 90.98828888888889,
     "topics": {
       "ai": {
         "count": 1487,
