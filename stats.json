@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26 14:22:05",
+  "generated_at": "2026-10-26 14:22:07",
   "overall": {
     "total_notes": 30339,
     "total_words": 15479063,
@@ -1437,8 +1437,8 @@
       }
     },
     "size": {
-      "total_bytes": 2015845015,
-      "md_files_bytes": 121122825,
+      "total_bytes": 2015873086,
+      "md_files_bytes": 121150896,
       "attachments_bytes": 1893365142,
       "git_commits": 3311
     }
